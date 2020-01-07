@@ -24,7 +24,7 @@ describe('Function appends value to the middle of given array', () => {
     let value = 4;
     let newArray = shiftArray(array, value);
 
-    expect(newArray[2]).toNotEqual(4)
+    expect(newArray[2]).not.toEqual(4)
 
   })
 })
