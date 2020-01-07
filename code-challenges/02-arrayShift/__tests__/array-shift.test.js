@@ -9,8 +9,7 @@ describe('Function appends value to the middle of given array', () => {
     let value = 8;
     let newArray = shiftArray(array,value);
     expect(newArray[5]).toEqual(8);
-  })
-
+  });
 
   it('Array should be longer by one index', () => {
     let array = [1,2,3];
@@ -21,10 +20,10 @@ describe('Function appends value to the middle of given array', () => {
 
   it('Should not replace other current indexes', () => {
     let array = [1,2,3,4,5,6];
-    let value = 4;
+    let value = 10;
     let newArray = shiftArray(array, value);
 
-    expect(newArray[2]).not.toEqual(4)
+    expect(newArray[2]).not.toEqual(10);
 
-  })
+  });
 })
