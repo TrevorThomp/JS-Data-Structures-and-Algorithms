@@ -1,6 +1,6 @@
 'use strict';
 
-const shiftArray = require('../array-shift.js')
+const shiftArray = require('../array-shift.js');
 
 describe('Function appends value to the middle of given array', () => {
 
@@ -24,4 +24,4 @@ describe('Function appends value to the middle of given array', () => {
     let newArray = shiftArray(array, value);
     expect(newArray[2]).not.toEqual(10);
   });
-})
+});
