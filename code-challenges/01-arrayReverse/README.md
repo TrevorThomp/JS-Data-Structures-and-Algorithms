@@ -9,7 +9,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 The approach that was to declare a function that takes in an array as an argument. This function also declares an array literal and sets a counter variable to 0. The function will then loop through the array that is passed through the array in a decrementing manner. Within this loop, the new array will have it's indexes assigned by the array that is being looped through while incrementing the counter variable. This will return a new array in reversed manner.
 
 ## Links and Resources
-* [submission PR](http://xyz.com)
+* [submission PR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
 
 ## Solution
 ![whiteboard](./assets/arrayReverse.jpg)
