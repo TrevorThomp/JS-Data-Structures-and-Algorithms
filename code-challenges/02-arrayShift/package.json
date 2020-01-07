@@ -1,7 +1,7 @@
 {
   "name": "02-arrayShift",
   "version": "1.0.0",
-  "description": "<!-- Short summary or background information -->",
+  "description": "Return an array that places the value in the middle of the array.",
   "main": "array-shift.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
