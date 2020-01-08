@@ -29,3 +29,6 @@ function binarySearch(arr,key) {
 }
 
 module.exports = binarySearch;
+
+
+console.log(new Array(100).keys());
