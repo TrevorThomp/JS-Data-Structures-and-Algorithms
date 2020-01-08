@@ -12,5 +12,5 @@ Within the function declare three variables that represent the start, middle and
  * [Test Link](./__tests__/array-binary-search.test.js)
 
 ## Solution
-![whiteBoard](./assets/whiteboard2.jpg)
-![whiteBoard](./assets/whiteboard.jpg)
+![whiteBoard](./assets/arrayBinarySearch2.jpg)
+![whiteBoard](./assets/arrayBinarySearch.jpg)
