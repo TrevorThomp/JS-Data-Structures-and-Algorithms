@@ -32,5 +32,10 @@ describe('Linked List', () => {
     expect(linkedList.head.value).toEqual(4);
   });
 
-
+  it('Returns true when finding value in linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    expect(linkedList.includes(2)).toBeTruthy();
+  })
 })
