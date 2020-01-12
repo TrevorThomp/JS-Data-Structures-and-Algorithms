@@ -13,7 +13,7 @@ class LinkedList {
   }
 
   insert(value) {
-    let newNode = this.value;
+    let newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
   }
