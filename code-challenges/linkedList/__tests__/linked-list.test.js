@@ -45,4 +45,12 @@ describe('Linked List', () => {
     expect(linkedList.includes(2)).toEqual(false);
   });
 
+  it('Properly returns a collection of all values in the list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    expect(linkedList.toString()).toEqual('Head -> 3 -> 2 -> 1 -> NULL');
+  });
+
 });
