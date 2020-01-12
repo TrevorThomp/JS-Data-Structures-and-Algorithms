@@ -21,7 +21,7 @@ class LinkedList {
   includes(value) {
     let current = this.head;
     while (current !== null) {
-      if (current.val !== value) {
+      if (current.value === value) {
         return true;
       } else {
         current = current.next;

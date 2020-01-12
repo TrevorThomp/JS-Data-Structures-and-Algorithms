@@ -36,6 +36,13 @@ describe('Linked List', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
     linkedList.insert(2);
-    expect(linkedList.includes(2)).toBeTruthy();
-  })
-})
+    expect(linkedList.includes(1)).toEqual(true);
+  });
+
+  it('Returns false when value is not in list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    expect(linkedList.includes(2)).toEqual(false);
+  });
+
+});
