@@ -41,13 +41,3 @@ class LinkedList {
   }
 
 }
-
-const list = new LinkedList();
-
-list.insert(1);
-list.insert(2);
-list.insert(3);
-
-let value = list.includes(5);
-
-console.log(value);
