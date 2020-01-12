@@ -18,3 +18,5 @@ class LinkedList {
     this.head = newNode;
   }
 }
+
+module.exports = {LinkedList, Node};
