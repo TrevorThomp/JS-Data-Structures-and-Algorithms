@@ -14,7 +14,7 @@ class Node {
 /**
  * @class
  */
-class LinkedList {
+class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -47,4 +47,4 @@ class LinkedList {
   }
 }
 
-module.exports = LinkedList;
+module.exports = DoublyLinkedList;
