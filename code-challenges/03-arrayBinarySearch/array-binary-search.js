@@ -4,6 +4,7 @@
  * @function - Takes an array and value and finds the index of given key
  * @param {Array} arr 
  * @param {*} key 
+ * @returns value
  */
 function binarySearch(arr,key) {
   let left = 0;
