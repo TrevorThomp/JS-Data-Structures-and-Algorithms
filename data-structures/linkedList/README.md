@@ -16,3 +16,7 @@ toString() - Iterates through list attaching values to a string and returning th
 * [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/5)
 * [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
 * [docs](/docs)
+
+## Links to Code
+* [codeLink](linked-list.js)
+* [testLink](/__tests__/linked-list.test.js)
