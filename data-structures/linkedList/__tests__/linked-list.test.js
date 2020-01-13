@@ -53,4 +53,11 @@ describe('Linked List', () => {
     expect(linkedList.toString()).toEqual('Head -> 3 -> 2 -> 1 -> NULL');
   });
 
+  it('Can successfully add node to the end of the list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.append(2);
+    expect(linkedList.head.next.value).toEqual(2);
+  });
+
 });
