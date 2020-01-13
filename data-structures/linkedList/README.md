@@ -19,4 +19,4 @@ toString() - Iterates through list attaching values to a string and returning th
 
 ## Links to Code
 * [codeLink](linked-list.js)
-* [testLink](/__tests__/linked-list.test.js)
+* [testLink](__tests__/linked-list.test.js)
