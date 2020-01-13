@@ -16,6 +16,6 @@ insertBefore(val, newValue) - Inserts newValue before val in the linked list
 insertAfter(val, newValue) - Inserts newValue after the val in the linked list
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/11)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144240606)
 * [docs](/docs)
