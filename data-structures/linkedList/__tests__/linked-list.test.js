@@ -60,4 +60,12 @@ describe('Linked List', () => {
     expect(linkedList.head.next.value).toEqual(2);
   });
 
+  it('Can successfully add multiple nodes to the end of the list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.append(3);
+    linkedList.append(4);
+    expect(linkedList.head.next.next.value).toEqual(4);
+  });
+
 });
