@@ -93,7 +93,7 @@ class LinkedList {
     current.next = newNode;
   }
   
-/**
+  /**
  * Inserts newValue after val in the list
  * @param {*} val 
  * @param {*} newValue 
