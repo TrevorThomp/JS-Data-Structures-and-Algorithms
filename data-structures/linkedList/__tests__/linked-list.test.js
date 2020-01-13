@@ -79,4 +79,23 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.next.value).toEqual(2);
   });
 
+  xit('Can successfully insert a node before the first node in the list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insertBefore(3,10);
+    expect(linkedList.head.value).toEqual(10);
+  });
+
+  it('Can successfully insert a node in the middle of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insertAfter(3,10);
+    expect(linkedList.head.next.next.value).toEqual(10);
+    expect(linkedList.head.next.next.next.value).toEqual(2);
+  });
 });

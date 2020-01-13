@@ -86,6 +86,7 @@ class LinkedList {
     while (current.value !== val) {
       current = current.next;
     }
+    newNode.next = current.next;
     current.next = newNode;
   }
 }
