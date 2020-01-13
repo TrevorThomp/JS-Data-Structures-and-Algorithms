@@ -11,3 +11,7 @@ The approach I took was defining the Node class first with the proper value and 
 insert(value) - Inserts value at the beginning of the linked list
 includes(value) - Iterates through list checking if value exists in the list
 toString() - Iterates through list attaching values to a string and returning the collection
+
+## Links
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/5)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
