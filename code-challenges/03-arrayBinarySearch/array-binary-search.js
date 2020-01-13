@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @function - Takes an array and value and finds the index of given key
+ * @function
  * @param {Array} arr 
  * @param {*} key 
  * @returns value
