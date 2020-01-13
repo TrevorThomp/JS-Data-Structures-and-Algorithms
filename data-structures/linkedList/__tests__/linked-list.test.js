@@ -98,4 +98,13 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.value).toEqual(10);
     expect(linkedList.head.next.next.next.value).toEqual(2);
   });
+
+  it('Can successfully insert a node after the last node in the list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insertAfter(1,10);
+    expect(linkedList.head.next.next.next.value).toEqual(10);
+  });
 });
