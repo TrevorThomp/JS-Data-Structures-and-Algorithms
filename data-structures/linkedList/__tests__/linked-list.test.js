@@ -68,4 +68,15 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.value).toEqual(4);
   });
 
+  it('Can successfully insert a node before a node located in the middle of list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insertBefore(2,10);
+    expect(linkedList.head.next.next.value).toEqual(10);
+    expect(linkedList.head.next.next.next.value).toEqual(2);
+  });
+
 });
