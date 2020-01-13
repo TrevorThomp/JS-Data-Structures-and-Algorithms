@@ -19,3 +19,8 @@ insertAfter(val, newValue) - Inserts newValue after the val in the linked list
 * [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/11)
 * [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144240606)
 * [docs](/docs)
+
+## Links to Code
+* [codeLink](linked-list.js)
+* [testLink](__tests__/linked-list.test.js)
+

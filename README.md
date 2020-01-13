@@ -6,4 +6,4 @@
 * [arrayShift](/code-challenges/02-arrayShift)
 * [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
 
-* [linkedList](/code-challenges/linkedList)
+* [linkedList](/data-structures/linkedList)
