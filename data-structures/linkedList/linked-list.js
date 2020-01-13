@@ -57,37 +57,57 @@ class LinkedList {
     return `${string} -> NULL`;
   }
 
-  // append(value) {
-  //   let newNode = new Node(value);
-  //   let current = this.head;
+  /**
+   * Appends value to the end of the list
+   * @param {*} value 
+   */
+  append(value) {
+    let newNode = new Node(value);
+    let current = this.head;
 
-  //   while (current.next !== null) {
-  //     current = current.next;
-  //   }
-  //   current.next = newNode;
-  //   newNode.next = null;
-  // }
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = newNode;
+    newNode.next = null;
+  }
 
-  // insertBefore(val, newValue) {
-  //   let newNode = new Node(newValue);
-  //   let current = this.head;
+  /**
+   * Inserts newValue before val in the list
+   * @param {*} val 
+   * @param {*} newValue 
+   */
+  insertBefore(val, newValue) {
+    let newNode = new Node(newValue);
+    let current = this.head;
 
-  //   while (current.next.value !== val) {
-  //     current = current.next;
-  //   }
-  //   newNode.next = current.next;
-  //   current.next = newNode;
-  // }
+    if(current.value === val) {
+      newNode.next = this.head;
+      this.head = newNode;
+    } else {
+      while (current.next.value !== val) {
+        current = current.next;
+      } 
+    }
+    newNode.next = current.next;
+    current.next = newNode;
+  }
+  
+  /**
+ * Inserts newValue after val in the list
+ * @param {*} val 
+ * @param {*} newValue 
+ */
+  insertAfter(val, newValue) {
+    let newNode = new Node(newValue);
+    let current = this.head;
 
-  // insertAfter(val, newValue) {
-  //   let newNode = new Node(newValue);
-  //   let current = this.head;
-
-  //   while (current.value !== val) {
-  //     current = current.next;
-  //   }
-  //   current.next = newNode;
-  // }
+    while (current.value !== val) {
+      current = current.next;
+    }
+    newNode.next = current.next;
+    current.next = newNode;
+  }
 }
 
 module.exports = LinkedList;
