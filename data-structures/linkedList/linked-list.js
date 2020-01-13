@@ -57,6 +57,10 @@ class LinkedList {
     return `${string} -> NULL`;
   }
 
+  /**
+   * Appends value to the end of the list
+   * @param {*} value 
+   */
   append(value) {
     let newNode = new Node(value);
     let current = this.head;
@@ -68,6 +72,11 @@ class LinkedList {
     newNode.next = null;
   }
 
+  /**
+   * Inserts newValue before val in the list
+   * @param {*} val 
+   * @param {*} newValue 
+   */
   insertBefore(val, newValue) {
     let newNode = new Node(newValue);
     let current = this.head;
@@ -84,7 +93,11 @@ class LinkedList {
     current.next = newNode;
   }
   
-
+/**
+ * Inserts newValue after val in the list
+ * @param {*} val 
+ * @param {*} newValue 
+ */
   insertAfter(val, newValue) {
     let newNode = new Node(newValue);
     let current = this.head;
