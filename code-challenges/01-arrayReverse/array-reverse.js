@@ -1,5 +1,11 @@
 'use strict';
 
+/**
+ * 
+ * @function
+ * @param {array} arr
+ * @returns array 
+ */
 const reverseArray = function(arr) {
   const newArray = [];
   let counter = 0;

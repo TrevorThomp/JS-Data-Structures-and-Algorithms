@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * @class
+ */
 class Node {
   constructor(value, next, prev) {
     this.value = value;
@@ -8,6 +11,9 @@ class Node {
   }
 }
 
+/**
+ * @class
+ */
 class LinkedList {
   constructor() {
     this.head = null;

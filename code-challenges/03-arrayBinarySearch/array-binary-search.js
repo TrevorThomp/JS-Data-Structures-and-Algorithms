@@ -1,9 +1,10 @@
 'use strict';
 
 /**
- * @function - Takes an array and value and finds the index of given key
+ * @function
  * @param {Array} arr 
  * @param {*} key 
+ * @returns value
  */
 function binarySearch(arr,key) {
   let left = 0;
@@ -29,6 +30,3 @@ function binarySearch(arr,key) {
 }
 
 module.exports = binarySearch;
-
-
-console.log(new Array(100).keys());

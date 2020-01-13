@@ -1,3 +1,12 @@
+'use strict';
+
+/**
+ * 
+ * @function
+ * @param {array} arr 
+ * @param {number} value
+ * @return array 
+ */
 function shiftArray(arr,value) {
   let newArray = [];
   let middle = arr.length/2;
