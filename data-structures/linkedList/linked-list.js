@@ -122,7 +122,6 @@ class LinkedList {
       }
       previousNode.next = current.next;
     }
-    return false;
   }
 
   kthFromEnd(k) {

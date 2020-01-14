@@ -108,6 +108,16 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.next.value).toEqual(10);
   });
 
+  it('Can successfully remove nodes from the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.remove(3);
+    expect(linkedList.head.next.value).toEqual(2);
+  });
+
   it('Throws error when k is greater than the length of the linked list', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
@@ -139,5 +149,14 @@ describe('Linked List', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
     expect(linkedList.kthFromEnd(1)).toEqual('Error')
+  });
+
+  it('Returns the node value when k is found in the middle of list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(3)).toEqual(3);
   });
 });
