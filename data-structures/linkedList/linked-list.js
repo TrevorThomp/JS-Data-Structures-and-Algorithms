@@ -108,6 +108,22 @@ class LinkedList {
     newNode.next = current.next;
     current.next = newNode;
   }
+
+  remove(value) {
+    let current = this.head;
+    let previousNode;
+
+    if (current.value === value) {
+      current.next = current.next.next;  
+    } else {
+      while (current.value !== value) {
+        previousNode = current;
+        current = current.next;
+      }
+      previousNode.next = current.next;
+    }
+    return false;
+  }
 }
 
 module.exports = LinkedList;
