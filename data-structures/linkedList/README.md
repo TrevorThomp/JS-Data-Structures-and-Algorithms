@@ -18,8 +18,8 @@ remove(val) - Removes value from the linked list
 kthFromEnd(k) - k represents how far into the list from the end, kthFromEnd() will return the value of that node
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
 * [docs](/docs)
 
 ## Links to Code
