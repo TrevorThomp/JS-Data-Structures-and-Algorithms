@@ -108,4 +108,13 @@ describe('Linked List', () => {
     linkedList.insertAfter(1,10);
     expect(linkedList.head.next.next.next.value).toEqual(10);
   });
+
+  it('Throws error when k is greater than the length of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(5)).toEqual('Error');
+  });
 });
