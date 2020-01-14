@@ -108,7 +108,10 @@ class LinkedList {
     newNode.next = current.next;
     current.next = newNode;
   }
-
+  /**
+   * Removes value from linked list
+   * @param {*} value 
+   */
   remove(value) {
     let current = this.head;
     let previousNode;
@@ -122,7 +125,32 @@ class LinkedList {
       }
       previousNode.next = current.next;
     }
-    return false;
+  }
+
+  /**
+   * Returns the node value based on given input from length of array
+   * @param {*} k 
+   */
+  kthFromEnd(k) {
+    let current = this.head;
+    let counter = 0;
+
+    while (current !== null) {
+      counter++;
+      current = current.next;
+    }
+
+    current= this.head;
+
+    if (k < 0) return 'Error';
+
+    for (let i = 0; i < counter - k; i++) {
+      current = current.next;
+    }
+
+    if (k > counter - 1) return 'Error';
+
+    return current.value;
   }
 }
 

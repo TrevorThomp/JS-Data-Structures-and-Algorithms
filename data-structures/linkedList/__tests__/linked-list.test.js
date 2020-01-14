@@ -85,7 +85,6 @@ describe('Linked List', () => {
     linkedList.insert(2);
     linkedList.insert(3);
     linkedList.insertBefore(3,10);
-    console.log(linkedList);
     expect(linkedList.head.value).toEqual(10);
   });
 
@@ -107,5 +106,57 @@ describe('Linked List', () => {
     linkedList.insert(3);
     linkedList.insertAfter(1,10);
     expect(linkedList.head.next.next.next.value).toEqual(10);
+  });
+
+  it('Can successfully remove nodes from the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.remove(3);
+    expect(linkedList.head.next.value).toEqual(2);
+  });
+
+  it('Throws error when k is greater than the length of the linked list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(5)).toEqual('Error');
+  });
+
+  it('Throws error if k and the length of the list are the same', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(4)).toEqual('Error');
+  });
+
+  it('Throws error when k is not a positive integer', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(-1)).toEqual('Error');
+  });
+
+  it('Throws error when linked list is size of 1', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    expect(linkedList.kthFromEnd(1)).toEqual('Error');
+  });
+
+  it('Returns the node value when k is found in the middle of list', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(3)).toEqual(3);
   });
 });

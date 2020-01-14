@@ -14,13 +14,20 @@ toString() - Iterates through list attaching values to a string and returning th
 append(value) - Inserts value at the end of the linked list
 insertBefore(val, newValue) - Inserts newValue before val in the linked list
 insertAfter(val, newValue) - Inserts newValue after the val in the linked list
+remove(val) - Removes value from the linked list
+kthFromEnd(k) - k represents how far into the list from the end, kthFromEnd() will return the value of that node
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/11)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144240606)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
 * [docs](/docs)
 
 ## Links to Code
 * [codeLink](linked-list.js)
 * [testLink](__tests__/linked-list.test.js)
 
+
+## UML
+![append/insertBefore/insertAfter](assets/IMG_4239.JPG)
+![append/insertBefore/insertAfter](assets/IMG_4237.JPG)
+![append/insertBefore/insertAfter](assets/IMG_4238.JPG)
