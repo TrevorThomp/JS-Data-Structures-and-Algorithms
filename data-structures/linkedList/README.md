@@ -22,6 +22,11 @@ kthFromEnd(k) - k represents how far into the list from the end, kthFromEnd() wi
 * [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
 * [docs](/docs)
 
+## Links to Code
+* [codeLink](linked-list.js)
+* [testLink](__tests__/linked-list.test.js)
+
+
 ## UML
 ![append/insertBefore/insertAfter](assets/IMG_4239.JPG)
 ![append/insertBefore/insertAfter](assets/IMG_4237.JPG)
