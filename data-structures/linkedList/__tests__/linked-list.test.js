@@ -134,4 +134,10 @@ describe('Linked List', () => {
     linkedList.insert(4);
     expect(linkedList.kthFromEnd(-1)).toEqual('Error');
   });
+
+  it('Throws error when linked list is size of 1', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    expect(linkedList.kthFromEnd(1)).toEqual('Error')
+  });
 });
