@@ -108,7 +108,10 @@ class LinkedList {
     newNode.next = current.next;
     current.next = newNode;
   }
-
+  /**
+   * Removes value from linked list
+   * @param {*} value 
+   */
   remove(value) {
     let current = this.head;
     let previousNode;
@@ -124,6 +127,10 @@ class LinkedList {
     }
   }
 
+  /**
+   * Returns the node value based on given input from length of array
+   * @param {*} k 
+   */
   kthFromEnd(k) {
     let current = this.head;
     let counter = 0;

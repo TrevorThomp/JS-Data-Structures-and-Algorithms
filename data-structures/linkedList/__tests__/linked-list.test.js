@@ -148,7 +148,7 @@ describe('Linked List', () => {
   it('Throws error when linked list is size of 1', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
-    expect(linkedList.kthFromEnd(1)).toEqual('Error')
+    expect(linkedList.kthFromEnd(1)).toEqual('Error');
   });
 
   it('Returns the node value when k is found in the middle of list', () => {
