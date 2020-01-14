@@ -124,6 +124,24 @@ class LinkedList {
     }
     return false;
   }
+
+  kthFromEnd(k) {
+    let current = this.head;
+    let counter = 0;
+
+    while (current !== null) {
+      counter++;
+      current = current.next;
+    }
+
+    current= this.head;
+
+    for (let i = 0; i < counter - k; i++) {
+      current = current.next;
+    }
+
+    return current.value;
+  }
 }
 
 module.exports = LinkedList;
