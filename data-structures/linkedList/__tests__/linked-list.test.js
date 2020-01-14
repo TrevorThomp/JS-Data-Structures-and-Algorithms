@@ -123,6 +123,15 @@ describe('Linked List', () => {
     linkedList.insert(2);
     linkedList.insert(3);
     linkedList.insert(4);
-    console.log(linkedList.kthFromEnd(4));
+    expect(linkedList.kthFromEnd(4)).toEqual('Error');
+  });
+
+  it('Throws error when k is not a positive integer', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    expect(linkedList.kthFromEnd(-1)).toEqual('Error');
   });
 });

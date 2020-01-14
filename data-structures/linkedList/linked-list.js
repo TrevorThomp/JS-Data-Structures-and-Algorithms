@@ -136,11 +136,13 @@ class LinkedList {
 
     current= this.head;
 
+    if (k < 0) return 'Error';
+
     for (let i = 0; i < counter - k; i++) {
       current = current.next;
     }
 
-    if (k < 0 || k > counter - 1) return 'Error';
+    if (k > counter - 1) return 'Error';
 
     return current.value;
   }
