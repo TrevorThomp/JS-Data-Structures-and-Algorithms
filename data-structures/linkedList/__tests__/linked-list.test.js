@@ -85,7 +85,6 @@ describe('Linked List', () => {
     linkedList.insert(2);
     linkedList.insert(3);
     linkedList.insertBefore(3,10);
-    console.log(linkedList);
     expect(linkedList.head.value).toEqual(10);
   });
 
@@ -116,5 +115,14 @@ describe('Linked List', () => {
     linkedList.insert(3);
     linkedList.insert(4);
     expect(linkedList.kthFromEnd(5)).toEqual('Error');
+  });
+
+  it('Throws error if k and the length of the list are the same', () => {
+    let linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    console.log(linkedList.kthFromEnd(4));
   });
 });

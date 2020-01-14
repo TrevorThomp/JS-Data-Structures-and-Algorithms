@@ -140,7 +140,7 @@ class LinkedList {
       current = current.next;
     }
 
-    if (k < 0 || k > counter) return 'Error';
+    if (k < 0 || k > counter - 1) return 'Error';
 
     return current.value;
   }
