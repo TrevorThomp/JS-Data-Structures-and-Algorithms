@@ -114,21 +114,21 @@ class LinkedList {
    */
   remove(value) {
     let current = this.head;
-    let previousNode;
+    let previousList;
 
     if (current.value === value) {
       current.next = current.next.next;  
     } else {
       while (current.value !== value) {
-        previousNode = current;
+        previousList = current;
         current = current.next;
       }
-      previousNode.next = current.next;
+      previousList.next = current.next;
     }
   }
 
   /**
-   * Returns the node value based on given input from length of array
+   * Returns the listC value based on given input from length of array
    * @param {*} k 
    */
   kthFromEnd(k) {
@@ -154,4 +154,45 @@ class LinkedList {
   }
 }
 
+
+
 module.exports = LinkedList;
+
+
+function mergeLists(listA, listB) {
+  
+  var listC = new LinkedList();
+  let nodeA = listA.head;
+  let nodeB = listB.head;
+  
+  while (nodeA !== null && nodeB !== null) {
+    if (nodeA.value <= nodeB.value) { 
+      listC.next = nodeA;
+      nodeA = nodeA.next;
+    } else {
+      listC.next = nodeB;
+      nodeB = nodeB.next;
+    }
+    listC = listC.next;
+  }
+
+  if (nodeB === null) { listC.next = nodeA; }
+  if (nodeA === null) { listC.next = nodeB; }
+
+  return listC.next;
+}
+
+const listA = new LinkedList();
+const listB = new LinkedList();
+
+listA.insert(3);
+listA.insert(2);
+listA.insert(1);
+
+listB.insert(6);
+listB.insert(5);
+listB.insert(4);
+
+let merged = mergeLists(listA,listB);
+
+console.log(merged);

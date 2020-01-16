@@ -159,4 +159,31 @@ describe('Linked List', () => {
     linkedList.insert(4);
     expect(linkedList.kthFromEnd(3)).toEqual(3);
   });
+
+  it('Should attach one list to the other', () => {
+    function merge(listA, listB) {
+      let currentA = listA.head;
+      let currentB = listB.head;
+    
+      while (currentB.next !== null) {
+        currentB = currentB.next;
+      }
+      currentB.next = currentA;
+      console.log(currentB.next)
+      return currentB;
+    }
+
+    let listA = new LinkedList();
+    let listB = new LinkedList();
+
+    listA.insert(1);
+    listA.insert(2);
+    listA.insert(3);
+
+    listB.insert(1);
+    listB.insert(5);
+    listB.insert(6);
+
+    merge(listA, listB);
+  })
 });

@@ -16,6 +16,7 @@ insertBefore(val, newValue) - Inserts newValue before val in the linked list
 insertAfter(val, newValue) - Inserts newValue after the val in the linked list
 remove(val) - Removes value from the linked list
 kthFromEnd(k) - k represents how far into the list from the end, kthFromEnd() will return the value of that node
+merge(listA,listB) - We are looping through listA and appending listB at the end of listA
 
 ## Links
 * [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
