@@ -152,6 +152,29 @@ class LinkedList {
 
     return current.value;
   }
+
+  mergeLists(listB) {
+  
+    var listC = new LinkedList();
+    let nodeA = this.head;
+    let nodeB = listB.head;
+    
+    while (nodeA !== null && nodeB !== null) {
+      if (nodeA.value <= nodeB.value) { 
+        listC.next = nodeA;
+        nodeA = nodeA.next;
+      } else {
+        listC.next = nodeB;
+        nodeB = nodeB.next;
+      }
+      listC = listC.next;
+    }
+  
+    if (nodeB === null) { listC.next = nodeA; }
+    if (nodeA === null) { listC.next = nodeB; }
+  
+    return listC.next;
+  }
 }
 
 
@@ -159,28 +182,7 @@ class LinkedList {
 module.exports = LinkedList;
 
 
-function mergeLists(listA, listB) {
-  
-  var listC = new LinkedList();
-  let nodeA = listA.head;
-  let nodeB = listB.head;
-  
-  while (nodeA !== null && nodeB !== null) {
-    if (nodeA.value <= nodeB.value) { 
-      listC.next = nodeA;
-      nodeA = nodeA.next;
-    } else {
-      listC.next = nodeB;
-      nodeB = nodeB.next;
-    }
-    listC = listC.next;
-  }
 
-  if (nodeB === null) { listC.next = nodeA; }
-  if (nodeA === null) { listC.next = nodeB; }
-
-  return listC.next;
-}
 
 const listA = new LinkedList();
 const listB = new LinkedList();
@@ -193,6 +195,6 @@ listB.insert(6);
 listB.insert(5);
 listB.insert(4);
 
-let merged = mergeLists(listA,listB);
+let merged = listA.mergeLists(listA,listB);
 
 console.log(merged);
