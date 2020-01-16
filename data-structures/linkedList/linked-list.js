@@ -154,8 +154,13 @@ class LinkedList {
   }
 }
 
+/**
+ * @function
+ * @param {object} listA 
+ * @param {object} listB 
+ * @returns {object}
+ */
 function mergeLists(listA, listB) {
-  
   let listC = new LinkedList();
   let nodeA = listA.head;
   let nodeB = listB.head;
@@ -172,7 +177,6 @@ function mergeLists(listA, listB) {
     }
     listC = listC.next;
   }
-
 
   if (nodeA === null) { listC.next = nodeB; }
   if (nodeB === null) { listC.next = nodeA; }
