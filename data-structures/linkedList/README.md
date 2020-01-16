@@ -25,5 +25,5 @@ merge(listA,listB) - We are looping through listA and appending listB at the end
 
 ## UML
 ![append/insertBefore/insertAfter](assets/IMG_4239.JPG)
-![append/insertBefore/insertAfter](assets/IMG_4237.JPG)
-![append/insertBefore/insertAfter](assets/IMG_4238.JPG)
+![kthFromEnd](assets/IMG_4237.JPG)
+![kthFromEnd](assets/IMG_4238.JPG)
