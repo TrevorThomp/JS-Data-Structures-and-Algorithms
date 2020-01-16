@@ -18,6 +18,12 @@ remove(val) - Removes value from the linked list
 kthFromEnd(k) - k represents how far into the list from the end, kthFromEnd() will return the value of that node
 merge(listA,listB) - We are looping through listA and appending listB at the end of listA
 
+# Challenge - Merge two separate linked lists
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+The approach that I took was creating a method to take in two parameters representing two separate linked lists. Within the method, I instantiate a third linked list that will be holding all the values as we traverse through the other two lists. I implemented a sort feature within the list to compare each value upon traversal, then inserting the lesser value into the third list. Once one of the lists as reach the end, then we append the rest of the other list because at that point it's already sorted and can just be attached. The efficiency to this approach is 0(n);
+
 ## Links
 * [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
 * [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
