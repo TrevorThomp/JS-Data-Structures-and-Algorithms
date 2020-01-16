@@ -25,9 +25,14 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 The approach that I took was creating a method to take in two parameters representing two separate linked lists. Within the method, I instantiate a third linked list that will be holding all the values as we traverse through the other two lists. I implemented a sort feature within the list to compare each value upon traversal, then inserting the lesser value into the third list. Once one of the lists as reach the end, then we append the rest of the other list because at that point it's already sorted and can just be attached. The efficiency to this approach is 0(n);
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/1)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144070892)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
 * [docs](/docs)
+
+## Links to Code
+* [codeLink](linked-list.js)
+* [testLink](__tests__/linked-list.test.js)
+
 
 ## UML
 ![append/insertBefore/insertAfter](assets/IMG_4239.JPG)
