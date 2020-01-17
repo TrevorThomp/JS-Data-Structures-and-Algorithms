@@ -62,6 +62,20 @@ describe('Queue Tests', () => {
     expect(queue.peek().value).toEqual(1);
   });
 
+  it('Returns empty after multiple dequeues', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+    queue.enqueue(4);
+
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+
+    expect(queue.isEmpty()).toEqual(true);
+  });
+
   it('Returns boolean based on queue being empty', () => {
     expect(queue.isEmpty()).toEqual(true);
     queue.enqueue(1);
