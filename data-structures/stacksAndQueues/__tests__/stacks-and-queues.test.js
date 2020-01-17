@@ -37,7 +37,17 @@ describe('Stack Tests', () => {
 
 describe('Queue Tests', () => {
 
-  it
+  let queue;
+
+  beforeEach(() => {
+    queue = new Queue();
+  });
+
+  it('Adds node to queue', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    expect(queue.rear.value).toEqual(2);
+  });
 
 
 });
