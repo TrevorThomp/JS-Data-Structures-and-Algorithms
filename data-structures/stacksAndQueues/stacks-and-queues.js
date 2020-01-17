@@ -12,6 +12,22 @@ class Stack {
     this.top = null;
   }
 
+  push(value) {
+    let newNode = new Node(value);
+    newNode.next = this.top;
+    this.top = newNode;
+  }
+
+  pop() {
+    let temp;
+    let top = this.top;
+    temp = top;
+    top = top.next;
+    temp.next = null;
+
+    return temp;
+  }
+
   peek() {
     return this.top;
   }
