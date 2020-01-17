@@ -21,6 +21,7 @@ class Stack {
   pop() {
     let temp;
     let top = this.top;
+
     temp = top;
     top = top.next;
     temp.next = null;
@@ -57,6 +58,23 @@ class Queue {
     }
     this.rear.next = newNode;
     this.rear = newNode;
+  }
+
+  dequeue() {
+    let temp;
+
+    temp = this.front;
+
+    this.front = this.front.next;
+    temp.next = null;
+  }
+
+  peek() {
+    return this.front;
+  }
+
+  isEmpty() {
+
   }
 }
 
