@@ -185,3 +185,37 @@ function mergeLists(listA, listB) {
 }
 
 module.exports = {LinkedList, mergeLists};
+
+const list = new LinkedList();
+
+list.insert(1)
+list.insert(0)
+list.insert(0)
+list.insert(1)
+
+function palinDrome(list) {
+  let current = list.head;
+  const forwardArray = [];
+  const reverseArray = [];
+
+  while (current !== null) {
+    forwardArray.push(current.value);
+    current = current.next;
+  }
+
+  for (let i = forwardArray.length -1; i >= 0; i--) {
+    reverseArray.push(forwardArray[i]);
+  }
+  console.log(forwardArray);
+  console.log(reverseArray);
+
+  for (let i = 0; i < reverseArray.length; i++) {
+    if (forwardArray[i] === reverseArray[i]) {
+      return true;
+    }
+  }
+  return false;
+
+}
+
+console.log(palinDrome(list));
