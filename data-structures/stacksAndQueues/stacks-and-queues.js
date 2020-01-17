@@ -32,6 +32,14 @@ class Stack {
     return this.top;
   }
 
+  isEmpty() {
+    let top = this.top;
+
+    if (!top) return true;
+
+    return false;
+  }
+
 }
 
 class Queue {
