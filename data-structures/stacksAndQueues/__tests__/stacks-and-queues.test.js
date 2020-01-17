@@ -20,6 +20,14 @@ describe('Stack Tests', () => {
     expect(stack.top.value).toEqual(1);
   });
 
+  it('Returns top node', () => {
+    let stack = new Stack();
+    stack.push(1);
+    stack.push(2);
+
+    expect(stack.peek().value).toEqual(2);
+  });
+
 });
 
 // describe('Queue Tests', () => {
