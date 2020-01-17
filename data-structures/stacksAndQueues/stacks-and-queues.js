@@ -44,8 +44,19 @@ class Stack {
 
 class Queue {
   constructor() {
-    this.front = null;
     this.rear = null;
+    this.front = null;
+  }
+
+  enqueue(value) {
+    let newNode = new Node(value);
+
+    if (!this.front) {
+      this.front = newNode;
+      this.rear = newNode;
+    }
+    this.rear.next = newNode;
+    this.rear = newNode;
   }
 }
 
