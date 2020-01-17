@@ -56,4 +56,10 @@ describe('Queue Tests', () => {
     expect(queue.front.value).toEqual(2);
   });
 
+  it('Returns the front node from queue', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    expect(queue.peek().value).toEqual(1);
+  })
+
 });
