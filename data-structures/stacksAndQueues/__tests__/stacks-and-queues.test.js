@@ -15,9 +15,10 @@ describe('Stack Tests', () => {
     let stack = new Stack();
     stack.push(1);
     stack.push(2);
+    stack.pop()
 
-    console.log(stack)
-  })
+    expect(stack.top.value).toEqual(1);
+  });
 
 });
 

@@ -35,10 +35,9 @@ class Stack {
    */
   pop() {
     let temp;
-    let top = this.top;
 
-    temp = top;
-    top = top.next;
+    temp = this.top;
+    this.top = this.top.next;
     temp.next = null;
 
     return temp;
