@@ -49,5 +49,11 @@ describe('Queue Tests', () => {
     expect(queue.rear.value).toEqual(2);
   });
 
+  it('Removes node from queue', () => {
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.dequeue();
+    expect(queue.front.value).toEqual(2);
+  });
 
 });
