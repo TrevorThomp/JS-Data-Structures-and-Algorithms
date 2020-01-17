@@ -28,6 +28,12 @@ describe('Stack Tests', () => {
     expect(stack.peek().value).toEqual(2);
   });
 
+  it('Checks if stack is empty', () => {
+    let stack = new Stack();
+
+    expect(stack.isEmpty()).toEqual(true);
+  });
+
 });
 
 // describe('Queue Tests', () => {
