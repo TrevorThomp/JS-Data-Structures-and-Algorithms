@@ -60,6 +60,12 @@ describe('Queue Tests', () => {
     queue.enqueue(1);
     queue.enqueue(2);
     expect(queue.peek().value).toEqual(1);
-  })
+  });
+
+  it('Returns boolean based on queue being empty', () => {
+    expect(queue.isEmpty()).toEqual(true);
+    queue.enqueue(1);
+    expect(queue.isEmpty()).toEqual(false);
+  });
 
 });
