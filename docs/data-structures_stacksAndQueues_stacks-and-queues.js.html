@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/linkedList/doubly-linked-list.js</title>
+    <title>JSDoc: Source: data-structures/stacksAndQueues/stacks-and-queues.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/linkedList/doubly-linked-list.js</h1>
+    <h1 class="page-title">Source: data-structures/stacksAndQueues/stacks-and-queues.js</h1>
 
     
 
@@ -29,53 +29,125 @@
             <pre class="prettyprint source linenums"><code>'use strict';
 
 /**
+ * Node Class
  * @class
  */
 class Node {
-  constructor(value, next, prev) {
+  constructor(value, next) {
     this.value = value;
     this.next = next;
-    this.prev = prev;
   }
 }
 
 /**
+ * Stack Class
  * @class
  */
-class DoublyLinkedList {
+class Stack {
   constructor() {
-    this.head = null;
-    this.tail = null;
+    this.top = null;
   }
 
-  insert(value) {
+  /**
+   * Pushes node on to the top of the stack
+   * @param {*} value 
+   */
+  push(value) {
+    let newNode = new Node(value);
+    newNode.next = this.top;
+    this.top = newNode;
+  }
+
+  /**
+   * Removes the top node on the stack
+   */
+  pop() {
+    let temp;
+
+    temp = this.top;
+    this.top = this.top.next;
+    temp.next = null;
+
+    return temp;
+  }
+
+  /**
+   * Return the top node on the stack
+   */
+  peek() {
+    return this.top;
+  }
+
+  /**
+   * Return true if stack is empty
+   */
+  isEmpty() {
+    let top = this.top;
+
+    if (!top) return true;
+
+    return false;
+  }
+
+}
+
+/**
+ * Queue Stack
+ * @class
+ */
+class Queue {
+  constructor() {
+    this.rear = null;
+    this.front = null;
+  }
+
+  /**
+   * Adds a node to the end of the queue
+   * @param {*} value 
+   */
+  enqueue(value) {
     let newNode = new Node(value);
 
-    if (!this.head) {
-      this.head = newNode;
-      this.tail = newNode;
-    } else {
-      newNode.prev = this.tail;
-      this.tail.next = newNode;
-      this.tail = newNode;
+    if (!this.front) {
+      this.front = newNode;
+      this.rear = newNode;
     }
+    this.rear.next = newNode;
+    this.rear = newNode;
   }
 
-  includes(value) {
-    let current = this.head;
+  /**
+   * Removes the node at the front of the queue
+   */
+  dequeue() {
+    let temp;
 
-    while (current) {
-      if (current.value === value) {
-        return true;
-      } else {
-        current = current.next;
-      }
-    }
+    temp = this.front;
+
+    this.front = this.front.next;
+    temp.next = null;
+  }
+
+  /**
+   * Return the node at the front of the queue
+   */
+  peek() {
+    return this.front;
+  }
+
+  /**
+   * Returns boolean depending on queue being empty
+   */
+  isEmpty() {
+    let front = this.front;
+
+    if (!front) return true;
     return false;
   }
 }
 
-module.exports = DoublyLinkedList;</code></pre>
+module.exports = { Stack, Queue };
+</code></pre>
         </article>
     </section>
 
