@@ -8,7 +8,20 @@ class Node {
 }
 
 class Stack {
-  constructor(top) {
+  constructor() {
     this.top = null;
   }
+
+  peek() {
+    return this.top;
+  }
+
 }
+
+class Queue {
+  constructor() {
+    this.front = null;
+    this.rear = null;
+  }
+}
+
