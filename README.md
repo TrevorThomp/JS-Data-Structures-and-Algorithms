@@ -7,3 +7,4 @@
 * [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
 
 * [linkedList](/data-structures/linkedList)
+* [stacksQueues](/data-structures/stacksAndQueues)
