@@ -1,6 +1,7 @@
 'use strict';
 
-const LinkedList = require('../linked-list');
+const {LinkedList} = require('../linked-list');
+const {mergeLists} = require('../linked-list');
 
 describe('Linked List', () => {
 
@@ -158,5 +159,25 @@ describe('Linked List', () => {
     linkedList.insert(3);
     linkedList.insert(4);
     expect(linkedList.kthFromEnd(3)).toEqual(3);
+  });
+
+  it('Should attach one list to the other', () => {
+    let listA = new LinkedList();
+    let listB = new LinkedList();
+
+    listA.insert(3);
+
+    listB.insert(6);
+    listB.insert(5);
+    listB.insert(4);
+    let merged = mergeLists(listA, listB);
+    expect(merged.value).toEqual(3);
+  });
+
+  it('Return Error if both lists are empty', () => {
+    let listA = new LinkedList();
+    let listB = new LinkedList();
+    let merged = mergeLists(listA, listB);
+    expect(merged).toBe('Error');
   });
 });
