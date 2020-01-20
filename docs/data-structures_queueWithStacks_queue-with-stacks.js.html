@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/stacksAndQueues/stacks-and-queues.js</title>
+    <title>JSDoc: Source: data-structures/queueWithStacks/queue-with-stacks.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/stacksAndQueues/stacks-and-queues.js</h1>
+    <h1 class="page-title">Source: data-structures/queueWithStacks/queue-with-stacks.js</h1>
 
     
 
@@ -46,6 +46,7 @@ class Node {
 class Stack {
   constructor() {
     this.top = null;
+    this.length = 0;
   }
 
   /**
@@ -56,6 +57,7 @@ class Stack {
     let newNode = new Node(value);
     newNode.next = this.top;
     this.top = newNode;
+    this.length++;
   }
 
   /**
@@ -67,6 +69,7 @@ class Stack {
     temp = this.top;
     this.top = this.top.next;
     temp.next = null;
+    this.length--;
 
     return temp;
   }
@@ -77,77 +80,53 @@ class Stack {
   peek() {
     return this.top;
   }
-
-  /**
-   * Return true if stack is empty
-   */
-  isEmpty() {
-    let top = this.top;
-
-    if (!top) return true;
-
-    return false;
-  }
-
 }
 
 /**
- * Queue Stack
+ * PseudoQueue class
  * @class
  */
-class Queue {
+class PseudoQueue {
   constructor() {
-    this.rear = null;
     this.front = null;
+    this.rear = null;
+    this.stackOne = new Stack();
+    this.stackTwo = new Stack();
   }
 
   /**
-   * Adds a node to the end of the queue
+   * Adds new node to stack inside of pseudoQueue
    * @param {*} value 
    */
   enqueue(value) {
     let newNode = new Node(value);
 
-    if (!this.front) {
-      this.front = newNode;
-      this.rear = newNode;
+    if(!this.front) {
+      this.front = this.stackTwo;
+      this.rear = this.stackOne;
     }
-    this.rear.next = newNode;
-    this.rear = newNode;
+    this.stackOne.push(newNode);
   }
 
   /**
-   * Removes the node at the front of the queue
+   * Pushes stackOne to stackTwo then pops top value off of stackTwo
+   * @returns removed node value
    */
   dequeue() {
-    let temp;
-
-    temp = this.front;
-
-    this.front = this.front.next;
-    temp.next = null;
+    if (this.stackTwo.length === 0) {
+      if(this.stackOne.length > 0) {
+        while (this.stackOne.length > 0) {
+          let popped = this.stackOne.pop();
+          this.stackTwo.push(popped);
+        }
+      }
+    }
+    return this.stackTwo.pop();
   }
 
-  /**
-   * Return the node at the front of the queue
-   */
-  peek() {
-    return this.front;
-  }
-
-  /**
-   * Returns boolean depending on queue being empty
-   */
-  isEmpty() {
-    let front = this.front;
-
-    if (!front) return true;
-    return false;
-  }
 }
 
-module.exports = { Stack, Queue };
-</code></pre>
+module.exports = PseudoQueue;</code></pre>
         </article>
     </section>
 
