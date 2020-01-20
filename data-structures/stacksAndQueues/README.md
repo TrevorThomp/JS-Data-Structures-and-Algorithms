@@ -9,13 +9,13 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 
 ## API
 
-### Queue
+### Stack
 * `push(value)` - Adds a node to the top of the stack
 * `pop()` - Removes the top node from the stack
 * `peek()` - Returns the top node from the stack
 * `isEmpty()` - Returns boolean based on the stack being empty
 
-### Stack
+### Queue
 * `enqueue()` - Adds a node the end of the queue
 * `dequeue()` - Removes node from the front of the queue
 * `peek()` - Returns the front node from the queue
