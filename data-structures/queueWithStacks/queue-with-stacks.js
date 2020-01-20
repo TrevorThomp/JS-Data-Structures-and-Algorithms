@@ -54,16 +54,22 @@ class Stack {
   }
 }
 
+/**
+ * PseudoQueue class
+ * @class
+ */
 class PseudoQueue {
   constructor() {
     this.front = null;
     this.rear = null;
     this.stackOne = new Stack();
     this.stackTwo = new Stack();
-  };
+  }
 
-
-
+  /**
+   * Adds new node to stack inside of pseudoQueue
+   * @param {*} value 
+   */
   enqueue(value) {
     let newNode = new Node(value);
 
@@ -74,6 +80,9 @@ class PseudoQueue {
     this.stackOne.push(newNode);
   }
 
+  /**
+   * Pushes stackOne to stackTwo then pops top value off of stackTwo
+   */
   dequeue() {
     if (this.stackTwo.length === 0) {
       if(this.stackOne.length > 0) {
@@ -88,12 +97,4 @@ class PseudoQueue {
 
 }
 
-
-const queue = new PseudoQueue();
-
-queue.enqueue(1)
-queue.enqueue(1)
-queue.enqueue(1)
-queue.dequeue();
-
-console.log(queue)
+module.exports = PseudoQueue;
