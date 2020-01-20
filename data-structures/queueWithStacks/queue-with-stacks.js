@@ -82,6 +82,7 @@ class PseudoQueue {
 
   /**
    * Pushes stackOne to stackTwo then pops top value off of stackTwo
+   * @returns removed node value
    */
   dequeue() {
     if (this.stackTwo.length === 0) {

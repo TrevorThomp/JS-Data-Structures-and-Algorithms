@@ -20,8 +20,8 @@ The approach I took was creating a Node, Stack and PseudoQueue class. Within the
 * `peek()` - Returns the front node from the queue
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/16)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145280014)
 * [docs](/docs)
 
 ## Links to Code
