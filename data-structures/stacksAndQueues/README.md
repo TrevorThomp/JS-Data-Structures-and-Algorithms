@@ -22,8 +22,8 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 * `isEmpty()` - Returns boolean based on the queue being empty
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/15/)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145268849)
 * [docs](/docs)
 
 ## Links to Code
