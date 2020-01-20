@@ -8,3 +8,4 @@
 
 * [linkedList](/data-structures/linkedList)
 * [stacksQueues](/data-structures/stacksAndQueues)
+* [queuesWithStacks](/data-structures/queuesWithStacks)
