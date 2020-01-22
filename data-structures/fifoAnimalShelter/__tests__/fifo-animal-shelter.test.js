@@ -22,11 +22,13 @@ describe('Animal Shelter', () => {
     expect(shelter.dequeue()).toBeNull();
   });
 
-  xit('Should remove animal from shelter', () => {
+  it('Should remove animal from shelter', () => {
     shelter.enqueue('cat');
     shelter.enqueue('cat');
     shelter.dequeue('cat');
-    expect(shelter.cat.length).toBe(1);
+    shelter.dequeue('cat');
+    console.log(shelter)
+    expect(shelter.cat.length).toBe(0);
   });
 
 });

@@ -71,6 +71,7 @@ class Queue {
   constructor() {
     this.rear = null;
     this.front = null;
+    this.length = 0;
   }
 
   /**
@@ -86,6 +87,8 @@ class Queue {
     }
     this.rear.next = newNode;
     this.rear = newNode;
+    this.rear.next = null;
+    this.length++;
   }
 
   /**
@@ -93,11 +96,13 @@ class Queue {
    */
   dequeue() {
     let temp;
-
+    let hold = this.front;
     temp = this.front;
 
     this.front = this.front.next;
     temp.next = null;
+    this.length--;
+    return hold.value;
   }
 
   /**
