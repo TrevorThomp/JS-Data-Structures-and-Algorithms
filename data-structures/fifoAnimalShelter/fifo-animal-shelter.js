@@ -1,48 +1,35 @@
 'use strict';
 
-/**
- * Node Class
- * @class
- */
-class Node {
-  constructor(value, next) {
-    this.value = value;
-    this.next = next;
-  }
-}
+const {Queue} = require('../stacksAndQueues/stacks-and-queues');
 
 class AnimalShelter {
   constructor() {
-    this.rear = null;
-    this.front = null;
+    this.cat = new Queue();
+    this.dog = new Queue();
   }
 
   enqueue(animal) {
-    let newNode = new Node(animal);
-
-    if(!this.front) {
-      this.front = newNode;
-      this.rear = newNode;
-    }
-
-    this.rear.next = newNode;
-    this.rear = newNode;
-    this.rear.next= null;
+    animal === 'cat' ? this.cat.enqueue(animal) : 'Evil Cat';
+    animal === 'dog' ? this.dog.enqueue(animal) : 'Evil Dog';
   }
 
   dequeue(pref) {
-
-    if (pref !== 'dog' || pref !== 'cat') return null;
-
+    if (pref !== 'dog' && pref !== 'cat') return null;
+    pref === 'cat' ? this.cat.dequeue() : 'Evil Cat';
+    pref === 'dog' ? this.dog.dequeue() : 'Evil Dog';
   }
+
 }
 
 const shelter = new AnimalShelter();
 
-// shelter.enqueue('dog');
-// shelter.enqueue('cat');
-// shelter.enqueue('dog');
+shelter.enqueue('dog');
+shelter.enqueue('cat');
+shelter.enqueue('cat');
+shelter.enqueue('dog');
 
-shelter.dequeue()
+console.log(shelter)
+
+shelter.dequeue('cat');
 
 console.log(shelter)
