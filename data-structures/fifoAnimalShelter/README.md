@@ -2,10 +2,10 @@
 A Queue is a data structure that consists of Nodes that are placed in the queue on one side and dequeued from the other side.
 
 ## Challenge
-Create a Node, Queue and Stack class that all have the ability to add and remove nodes from their respective data structures. Also, give them the ability to peek the top item in the stack.
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 
 ## Approach & Efficiency
-The approach I took was creating a Node, Stack and Queue class. Within these classes are their respected methods that are focused on an efficiency of 0(1), but in certain methods will need an 0(n) for the traversal of the data structure.
+The approach that I took was declaring an Animal Shelter class that would instantiate two separate queues that represent cats and dogs. Within this class I added the two enqueue and dequeue methods that would target their specific queue and either add them or remove them. I also imported a previous queue that was being used to enqueue and dequeue the appropriate queues.
 
 ## API
 ### Queue
@@ -14,7 +14,7 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 
 ## Links
 * [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/18)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145486301)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145576945)
 * [docs](/docs)
 
 ## Links to Code
