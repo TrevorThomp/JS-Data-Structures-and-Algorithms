@@ -22,4 +22,5 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 * [testLink](__tests__/fifo-animal-shelter.test.js)
 
 ## UML
-![Animal Shelter]()
+![Animal Shelter](/assets/whiteboard.jpg)
+![Animal Shelter](/assets/whiteboard2.jpg)
