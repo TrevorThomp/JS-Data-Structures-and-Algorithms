@@ -39,8 +39,10 @@ class AnimalShelter {
 
 const shelter = new AnimalShelter();
 
-shelter.enqueue('dog');
-shelter.enqueue('cat');
-shelter.enqueue('dog');
+// shelter.enqueue('dog');
+// shelter.enqueue('cat');
+// shelter.enqueue('dog');
+
+shelter.dequeue()
 
 console.log(shelter)
