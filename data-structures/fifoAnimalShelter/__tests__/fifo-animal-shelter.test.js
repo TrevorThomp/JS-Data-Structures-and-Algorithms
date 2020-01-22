@@ -27,7 +27,6 @@ describe('Animal Shelter', () => {
     shelter.enqueue('cat');
     shelter.dequeue('cat');
     shelter.dequeue('cat');
-    console.log(shelter)
     expect(shelter.cat.length).toBe(0);
   });
 
