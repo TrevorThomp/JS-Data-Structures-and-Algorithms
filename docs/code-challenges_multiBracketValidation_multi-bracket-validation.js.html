@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: AnimalShelter</title>
+    <title>JSDoc: Source: code-challenges/multiBracketValidation/multi-bracket-validation.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,137 +17,55 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: AnimalShelter</h1>
+    <h1 class="page-title">Source: code-challenges/multiBracketValidation/multi-bracket-validation.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>AnimalShelter<span class="signature">()</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description">Creates two queues for cats and dogs for use of FIFO</div>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-    
-    <h2>Constructor</h2>
-    
-
-    
-    <h4 class="name" id="AnimalShelter"><span class="type-signature"></span>new AnimalShelter<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data-structures_fifoAnimalShelter_fifo-animal-shelter.js.html">data-structures/fifoAnimalShelter/fifo-animal-shelter.js</a>, <a href="data-structures_fifoAnimalShelter_fifo-animal-shelter.js.html#line10">line 10</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const {Stack} = require('../../data-structures/stacksAndQueues/stacks-and-queues');
+
+
+/**
+ * Returns boolean based on balanced or unbalanced brackets
+ * @param {string} str 
+ */
+function multiBracketValidation(str) {
+  let stack = new Stack();
+
+  let open = {
+    '{': '}',
+    '[': ']',
+    '(': ')',
+  };
+
+  let closed = {
+    '}': true,
+    ']': true,
+    ')': true,
+  };
+
+  for (let i = 0; i &lt; str.length; i++) {
+    let bracket = str[i];
+
+    if (open[bracket]) {
+      stack.push(bracket);
+      
+    } else if (closed[bracket]) {
+      if (open[stack.pop().value] !== bracket) return false;
+    }
+  }
+  return true;
+}
+
+module.exports = multiBracketValidation;</code></pre>
+        </article>
+    </section>
 
 
 
