@@ -2,6 +2,10 @@
 
 const {Queue} = require('../stacksAndQueues/stacks-and-queues');
 
+/**
+ * Creates two queues for cats and dogs for use of FIFO
+ * @class
+ */
 class AnimalShelter {
   constructor() {
     this.cat = new Queue();
@@ -21,15 +25,4 @@ class AnimalShelter {
 
 }
 
-const shelter = new AnimalShelter();
-
-shelter.enqueue('dog');
-shelter.enqueue('cat');
-shelter.enqueue('cat');
-shelter.enqueue('dog');
-
-console.log(shelter)
-
-shelter.dequeue('cat');
-
-console.log(shelter)
+module.exports = AnimalShelter;
