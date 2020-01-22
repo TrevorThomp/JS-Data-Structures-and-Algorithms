@@ -9,12 +9,12 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 
 ## API
 ### Queue
-* `enqueue()` - Adds a node the end of the queue
-* `dequeue()` - Removes node from the front of the queue
+* `enqueue(animal)` - Adds animal to the specified shelter
+* `dequeue(pref)` - Removes animal from the specified shelter
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/13/)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/144421889)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/18)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145486301)
 * [docs](/docs)
 
 ## Links to Code
@@ -22,4 +22,4 @@ The approach I took was creating a Node, Stack and Queue class. Within these cla
 * [testLink](__tests__/fifo-animal-shelter.test.js)
 
 ## UML
-![Stack & Queue: Pop, Push, Peek and isEmpty](assets/stacks-and-queues.jpg)
+![Animal Shelter]()
