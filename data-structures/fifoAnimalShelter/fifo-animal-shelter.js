@@ -22,7 +22,6 @@ class AnimalShelter {
     pref === 'cat' ? this.cat.dequeue() : 'Evil Cat';
     pref === 'dog' ? this.dog.dequeue() : 'Evil Dog';
   }
-
 }
 
 module.exports = AnimalShelter;
