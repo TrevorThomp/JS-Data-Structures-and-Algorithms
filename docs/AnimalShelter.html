@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: data-structures/linkedList/doubly-linked-list.js</title>
+    <title>JSDoc: Class: AnimalShelter</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,67 +17,137 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: data-structures/linkedList/doubly-linked-list.js</h1>
+    <h1 class="page-title">Class: AnimalShelter</h1>
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+        <h2><span class="attribs"><span class="type-signature"></span></span>AnimalShelter<span class="signature">()</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Creates two queues for cats and dogs for use of FIFO</div>
+        
+    
+</header>
 
-/**
- * @class
- */
-class Node {
-  constructor(value, next, prev) {
-    this.value = value;
-    this.next = next;
-    this.prev = prev;
-  }
-}
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * @class
- */
-class DoublyLinkedList {
-  constructor() {
-    this.head = null;
-    this.tail = null;
-  }
+    
+    <h2>Constructor</h2>
+    
 
-  insert(value) {
-    let newNode = new Node(value);
+    
+    <h4 class="name" id="AnimalShelter"><span class="type-signature"></span>new AnimalShelter<span class="signature">()</span><span class="type-signature"></span></h4>
+    
 
-    if (!this.head) {
-      this.head = newNode;
-      this.tail = newNode;
-    } else {
-      newNode.prev = this.tail;
-      this.tail.next = newNode;
-      this.tail = newNode;
-    }
-  }
+    
 
-  includes(value) {
-    let current = this.head;
 
-    while (current) {
-      if (current.value === value) {
-        return true;
-      } else {
-        current = current.next;
-      }
-    }
-    return false;
-  }
-}
 
-module.exports = DoublyLinkedList;</code></pre>
-        </article>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data-structures_fifoAnimalShelter_fifo-animal-shelter.js.html">data-structures/fifoAnimalShelter/fifo-animal-shelter.js</a>, <a href="data-structures_fifoAnimalShelter_fifo-animal-shelter.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
