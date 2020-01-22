@@ -22,5 +22,5 @@ The approach that I took was declaring an Animal Shelter class that would instan
 * [testLink](__tests__/fifo-animal-shelter.test.js)
 
 ## UML
-![Animal Shelter](/assets/whiteboard.jpg)
-![Animal Shelter](/assets/whiteboard2.jpg)
+![AnimalShelter](./assets/whiteboard.jpg)
+![AnimalShelter](./assets/whiteboard2.jpg)
