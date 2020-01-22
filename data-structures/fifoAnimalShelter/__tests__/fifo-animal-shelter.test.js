@@ -25,7 +25,7 @@ describe('Animal Shelter', () => {
   it('Should remove animal from shelter', () => {
     shelter.enqueue('cat');
     shelter.dequeue('cat');
-    expect(shelter.cat.length).toEqual(0);
+    expect(shelter.cat.front).toBe(null);
   });
 
 });
