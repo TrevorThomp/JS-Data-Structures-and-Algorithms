@@ -17,6 +17,9 @@ describe('Animal Shelter', () => {
     expect(shelter.cat.front.value).toEqual('cat');
   });
 
-
+  it('Should return null if cat or dog is not specified', () => {
+    shelter.enqueue('dog');
+    expect(shelter.dequeue()).toBeNull();
+  });
 
 });
