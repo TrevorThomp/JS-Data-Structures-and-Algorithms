@@ -12,5 +12,5 @@ My approach is to instantiate and new Stack object and set two objects represent
  * [Test Link](./__tests__/multi-bracket-validation.test.js)
 
 ## Solution
-![whiteBoard](./assets/arrayBinarySearch2.jpg)
-![whiteBoard](./assets/arrayBinarySearch.jpg)
+![whiteBoard](./assets/whiteboard.jpg)
+![whiteBoard](./assets/whiteboard2.jpg)

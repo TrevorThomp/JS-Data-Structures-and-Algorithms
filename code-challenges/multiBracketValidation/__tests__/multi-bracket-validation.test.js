@@ -11,4 +11,4 @@ describe('Multivalidator function', () => {
   it('Should return false with unbalanced brackets', () => {
     expect(multiValidatorFunction('(){)')).toEqual(false);
   });
-})
+});
