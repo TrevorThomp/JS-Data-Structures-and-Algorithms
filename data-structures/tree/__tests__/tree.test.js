@@ -6,6 +6,8 @@ const {BinaryTree} = require('../tree');
 
 describe('Binary Tree', () => {
 
+  let tree;
+
   let nodeOne;
   let nodeTwo;
   let nodeThree;
@@ -23,17 +25,22 @@ describe('Binary Tree', () => {
   });
 
   it('Instantiate empty tree', () => {
-    let tree = new BinaryTree();
+    tree = new BinaryTree();
     expect(tree.root).toBeNull();
   });
 
   it('Inserts one root node', () => {
-    // let node = new BinaryTreeNode(1);
-    let tree = new BinaryTree(nodeTwo);
+    tree = new BinaryTree(nodeTwo);
     expect(tree.root.val).toEqual(2);
   });
 
-
+  it('Add left and right children to node', () => {
+    tree = new BinaryTree(nodeOne);
+    tree.root.left = nodeTwo;
+    tree.root.right = nodeThree;
+    expect(tree.root.left.val).toEqual(2);
+    expect(tree.root.right.val).toEqual(3);
+  });
 
 
 
