@@ -12,7 +12,7 @@ let node = new BinaryTreeNode();
 
 class BinaryTree {
   constructor(node) {
-    this.root = node;
+    this.root = node || null;
   }
 
   preOrder() {
@@ -52,3 +52,6 @@ class BinaryTree {
   }
 
 }
+
+
+module.exports = {BinaryTreeNode, BinaryTree};
