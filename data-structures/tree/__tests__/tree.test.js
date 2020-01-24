@@ -42,6 +42,31 @@ describe('Binary Tree', () => {
     expect(tree.root.right.val).toEqual(3);
   });
 
+  it('Returns preOrder array', () => {
+    tree = new BinaryTree(nodeOne);
+    tree.root.left = nodeTwo;
+    tree.root.right = nodeThree;
+    tree.root.left.left = nodeFour;
+    tree.root.left.left.left = nodeFive;
+    expect(tree.preOrder()).toEqual([1, 2, 4, 5, 3]);
+  });
 
+  it('Returns inOrder array', () => {
+    tree = new BinaryTree(nodeOne);
+    tree.root.left = nodeTwo;
+    tree.root.right = nodeThree;
+    tree.root.left.left = nodeFour;
+    tree.root.left.left.left = nodeFive;
+    expect(tree.inOrder()).toEqual([5, 4, 2, 1, 3]);
+  });
 
-})
+  it('Returns postOrder array', () => {
+    tree = new BinaryTree(nodeOne);
+    tree.root.left = nodeTwo;
+    tree.root.right = nodeThree;
+    tree.root.left.left = nodeFour;
+    tree.root.left.left.left = nodeFive;
+    expect(tree.postOrder()).toEqual([5, 4, 2, 3, 1]);
+  });
+
+});
