@@ -10,3 +10,7 @@ My approach is to run a method recursively that is going to check if the node va
  ## Link to Code
  * [Code Link](./fizz-buzz-tree.js)
  * [Test Link](./__tests__/fizz-buzz-tree.test.js)
+
+
+## Whiteboard
+![fizzBuzzTree](assets/fizzBuzz.jpg)
