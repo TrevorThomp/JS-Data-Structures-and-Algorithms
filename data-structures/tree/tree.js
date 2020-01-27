@@ -65,7 +65,6 @@ class BinaryTree {
     recursive(this.root);
     return results;
   }
-
 }
 
 /**
@@ -133,3 +132,4 @@ class BinarySearchTree {
 }
 
 module.exports = {BinaryTreeNode, BinaryTree, BinarySearchTree};
+
