@@ -52,15 +52,46 @@ class BinaryTree {
 }
 
 class BinarySearchTree {
-  constructor(node) {
-    this.root = node || null;
+  constructor(value) {
+    this.root = new BinaryTreeNode(value);
+    this.count = 0;
   }
 
+  add(value) {
+    this.count++;
 
+    let newNode = new BinaryTreeNode(value);
 
+    const searchTree = node => {
+      if(value < node.val) {
+        if(!node.left) {
 
+          node.left = newNode;
+        } 
+        else {
+          searchTree(node.left)
+        }   
+      }
+  
+      else if (value > node.val) {
+        if (!node.right) {
+          node.right = newNode;
+        }
+        else {
+          searchTree(node.right);
+        }
+      }
+    }
 
+    searchTree(this.root);
+  }
 }
 
+let BST = new BinarySearchTree(15);
+
+BST.add(14);
+BST.add(17);
+
+console.log(BST)
 
 module.exports = {BinaryTreeNode, BinaryTree, BinarySearchTree};
