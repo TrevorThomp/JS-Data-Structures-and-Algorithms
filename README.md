@@ -12,3 +12,4 @@
 * [linkedList](/data-structures/linkedList)
 * [stacksQueues](/data-structures/stacksAndQueues)
 * [queuesWithStacks](/data-structures/queueWithStacks)
+* [BinaryTree](/data-structures/tree)
