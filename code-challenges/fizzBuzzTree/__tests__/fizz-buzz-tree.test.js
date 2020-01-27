@@ -27,4 +27,9 @@ describe('Fizz Buzz Tree', () => {
     let fizz = fizzBuzz(FizzTree);
     expect(fizz.root.val).toBe('FizzBuzz')
   });
-})
+
+  it('Should return error with no tree argument', () => {
+    let fizz = fizzBuzz();
+    expect(fizz).toBe('No tree value');
+  });
+});

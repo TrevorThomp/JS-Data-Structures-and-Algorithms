@@ -17,6 +17,11 @@ function fizzBuzz(val) {
 }
 
 function fizzBuzzTreeBuzz(tree) {
+
+  if(!tree) {
+    return 'No tree value';
+  }
+
   let recursive = node => {
     if (node.left) recursive(node.left);
     node.val = fizzBuzz(node.val);
