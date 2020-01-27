@@ -69,7 +69,7 @@ class BinarySearchTree {
           node.left = newNode;
         } 
         else {
-          searchTree(node.left)
+          searchTree(node.left);
         }   
       }
   
@@ -81,10 +81,27 @@ class BinarySearchTree {
           searchTree(node.right);
         }
       }
-    }
-
+    };
     searchTree(this.root);
   }
+
+  contains(value) {
+    let currentNode = this.root;
+
+    while (currentNode) {
+      if (value === currentNode.val) {
+        return true;
+      }
+      if (value < currentNode.val) {
+        currentNode = currentNode.left;
+      }
+      else {
+        currentNode = currentNode.right;
+      }
+    }
+    return false
+  }
+
 }
 
 let BST = new BinarySearchTree(15);
@@ -92,6 +109,6 @@ let BST = new BinarySearchTree(15);
 BST.add(14);
 BST.add(17);
 
-console.log(BST)
+console.log(BST.contains(13))
 
 module.exports = {BinaryTreeNode, BinaryTree, BinarySearchTree};
