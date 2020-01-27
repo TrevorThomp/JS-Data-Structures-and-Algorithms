@@ -3,6 +3,7 @@
 
 const {BinaryTreeNode} = require('../tree');
 const {BinaryTree} = require('../tree');
+const {BinarySearchTree} = require('../tree');
 
 describe('Binary Tree', () => {
 
@@ -68,5 +69,23 @@ describe('Binary Tree', () => {
     tree.root.left.left.left = nodeFive;
     expect(tree.postOrder()).toEqual([5, 4, 2, 3, 1]);
   });
+});
 
+describe('Binary Search Tree', () => {
+
+  it('Can insert value depending on value', () => {
+    let BST = new BinarySearchTree(15);
+    BST.add(13);
+    expect(BST.root.left.val).toEqual(13);
+    BST.add(17);
+    expect(BST.root.right.val).toEqual(17);
+  });
+
+  it('Returns boolean if value is in tree', () => {
+    let BST = new BinarySearchTree(15);
+    BST.add(13);
+    expect(BST.contains(13)).toBe(true);
+    BST.add(17);
+    expect(BST.contains(17)).toBe(true);
+  });
 });
