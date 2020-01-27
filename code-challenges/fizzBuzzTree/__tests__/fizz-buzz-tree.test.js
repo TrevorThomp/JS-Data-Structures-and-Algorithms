@@ -22,5 +22,9 @@ describe('Fizz Buzz Tree', () => {
     expect(fizz.root.right.val).toBe('Buzz');
   });
 
-
+  it('Should replace value divisible by both with FizzBuzz', () => {
+    let FizzTree = new BinarySearchTree(15);
+    let fizz = fizzBuzz(FizzTree);
+    expect(fizz.root.val).toBe('FizzBuzz')
+  });
 })
