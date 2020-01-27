@@ -9,7 +9,7 @@ describe('Fizz Buzz Tree', () => {
 
   beforeEach(() => {
     BST = new BinarySearchTree(6);
-  })
+  });
 
   it('Should replace value divisible by 3 to Fizz', () => {
     let fizz = fizzBuzz(BST);
@@ -25,7 +25,7 @@ describe('Fizz Buzz Tree', () => {
   it('Should replace value divisible by both with FizzBuzz', () => {
     let FizzTree = new BinarySearchTree(15);
     let fizz = fizzBuzz(FizzTree);
-    expect(fizz.root.val).toBe('FizzBuzz')
+    expect(fizz.root.val).toBe('FizzBuzz');
   });
 
   it('Should return error with no tree argument', () => {
