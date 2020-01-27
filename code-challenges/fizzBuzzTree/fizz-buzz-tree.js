@@ -1,9 +1,9 @@
 'use strict';
 
-const {BinarySearchTree} = require('../../data-structures/tree/tree');
-
-
-
+/**
+ * Compares value to modular operator and changes value
+ * @param {*} val 
+ */
 function fizzBuzz(val) {
   if (val % 3 === 0 && val % 5 === 0) {
     return 'FizzBuzz';
@@ -16,8 +16,11 @@ function fizzBuzz(val) {
   }
 }
 
+/**
+ * Recursively checks tree nodes and changes values
+ * @param {object} tree 
+ */
 function fizzBuzzTreeBuzz(tree) {
-
   if(!tree) {
     return 'No tree value';
   }
