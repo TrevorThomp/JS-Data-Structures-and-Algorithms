@@ -8,8 +8,6 @@ class BinaryTreeNode {
   }
 }
 
-let node = new BinaryTreeNode();
-
 class BinaryTree {
   constructor(node) {
     this.root = node || null;
@@ -53,5 +51,16 @@ class BinaryTree {
 
 }
 
+class BinarySearchTree {
+  constructor(node) {
+    this.root = node || null;
+  }
 
-module.exports = {BinaryTreeNode, BinaryTree};
+
+
+
+
+}
+
+
+module.exports = {BinaryTreeNode, BinaryTree, BinarySearchTree};
