@@ -26,12 +26,4 @@ function fizzBuzzTreeBuzz(tree) {
   return tree;
 }
 
-let BST = new BinarySearchTree(10);
-
-BST.add(15);
-BST.add(5);
-BST.add(6);
-BST.add(10);
-let newTree = fizzBuzzTreeBuzz(BST)
-
-console.log(newTree)
+module.exports = fizzBuzzTreeBuzz;
