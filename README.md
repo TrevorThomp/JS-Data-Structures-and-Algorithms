@@ -7,6 +7,7 @@
 * [arrayShift](/code-challenges/02-arrayShift)
 * [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
 * [multipleBracketValidation](/code-challenges/multiBracketValidation)
+* [fizzBuzzTree](/code-challenges/fizzBuzzTree)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
