@@ -99,16 +99,9 @@ class BinarySearchTree {
         currentNode = currentNode.right;
       }
     }
-    return false
+    return false;
   }
 
 }
-
-let BST = new BinarySearchTree(15);
-
-BST.add(14);
-BST.add(17);
-
-console.log(BST.contains(13))
 
 module.exports = {BinaryTreeNode, BinaryTree, BinarySearchTree};
