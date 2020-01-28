@@ -1,28 +1,32 @@
 'use strict';
 
 const {BinarySearchTree} = require('../../data-structures/tree/tree');
-const {BinaryTreeNode} = require('../../data-structures/tree/tree');
-const {Queue} = require('../../data-structures/stacksAndQueues/stacks-and-queues');
+const {Queue} = require('../../data-structures/stacksAndQueues/stacks-and-queues')
 
-let BT = new BinarySearchTree(45);
-BT.add(75);
-BT.add(65);
-BT.add(35);
+let tree = new BinarySearchTree(4);
+tree.add(2);
+tree.add(4);
+tree.add(5);
+tree.add(6);
 
-function breadthFirst(tree) {
-  let queue = new Queue();
-  queue.enqueue(tree.root)
- 
-  let currentNode = queue.dequeue();
-  console.log(currentNode)
-
-
-  while (currentNode) {
-    console.log(currentNode.val);
-    queue.enqueue(currentNode.left);
-    queue.enqueue(currentNode.right);
-    currentNode = queue.dequeue();
-  }
+function breadthFirstList(tree){
+  return breadthFirst(tree.root);
 }
 
-console.log(breadthFirst(BT))
+function breadthFirst(root){
+  const values = new Array();
+  const queue = new Queue();
+  if(!root) return null;
+  queue.enqueue(root);
+  while(!queue.isEmpty()){
+    let node = queue.dequeue();
+    values.push(node.val);
+    if(node.left) queue.enqueue(node.left);
+    if(node.right) queue.enqueue(node.right);
+  }
+  return values;
+}
+
+let test = breadthFirstList(tree);
+
+console.log(test)
