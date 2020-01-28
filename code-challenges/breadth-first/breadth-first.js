@@ -13,11 +13,20 @@ BT.add(35);
 BT.add(25);
 BT.add(15);
 
-console.log(BT)
-
 function breadthFirst(tree) {
-  if (!tree) {
-    return 'No Tree Defined';
-  }
+  let queue = new Queue();
+  queue.enqueue(tree.root)
+ 
+  let currentNode = queue.dequeue();
+  console.log(currentNode)
 
+
+  while (currentNode) {
+    console.log(currentNode.val);
+    queue.enqueue(currentNode.left);
+    queue.enqueue(currentNode.right);
+    currentNode = queue.dequeue();
+  }
 }
+
+console.log(breadthFirst(BT))
