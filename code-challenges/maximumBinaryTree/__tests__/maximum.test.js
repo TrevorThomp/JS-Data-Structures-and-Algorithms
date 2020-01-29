@@ -19,4 +19,9 @@ describe('Maximum Value', () => {
     expect(maximum(BT)).toBeNull();
   });
 
+  it('Returns root as max value if no children', () => {
+    let BT = new BinarySearchTree(6);
+    expect(maximum(BT)).toStrictEqual(6);
+  })
+
 });
