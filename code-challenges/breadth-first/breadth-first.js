@@ -1,7 +1,7 @@
 'use strict';
 
 const {BinarySearchTree} = require('../../data-structures/tree/tree');
-const {Queue} = require('../../data-structures/stacksAndQueues/stacks-and-queues')
+const {Queue} = require('../../data-structures/stacksAndQueues/stacks-and-queues');
 
 let tree = new BinarySearchTree(4);
 tree.add(2);
