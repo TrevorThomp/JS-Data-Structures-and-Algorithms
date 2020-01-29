@@ -1,7 +1,9 @@
 'use strict';
 
-const {BinarySearchTree} = require('../../data-structures/tree/tree');
-
+/**
+ * Loops until end of tree returning maximum value
+ * @param {object} tree 
+ */
 function maximum(tree) {
   if(!tree.root) {
     return null;
