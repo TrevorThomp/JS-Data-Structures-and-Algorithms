@@ -15,7 +15,10 @@ describe('Breadth First', () => {
     expect(breadthFirst(tree)).toEqual([3,2,4,1]);
   });
 
-
+  it('Returns null if no tree', () => {
+    let tree = new BinarySearchTree();
+    expect(breadthFirst(tree)).toEqual([null]);
+  })
 
 
 });
