@@ -27,6 +27,4 @@ function breadthFirst(root){
   return values;
 }
 
-let test = breadthFirstList(tree);
-
-console.log(test)
+module.exports = breadthFirstList;
