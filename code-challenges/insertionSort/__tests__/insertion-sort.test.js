@@ -15,15 +15,9 @@ describe('Insertion Sort', () => {
     expect(sortedArray).toBe('Invalid Argument');
   });
 
-  it('Returns error when no array', () => {
-    const sortedArray = insertionSort();
-    expect(sortedArray).toBe('Invalid Argument');
-  });
-
-  it('Returns error when no array', () => {
+  it('Returns error array is empty', () => {
     const array = [];
     const sortedArray = insertionSort(array);
     expect(sortedArray).toBe('Empty Array');
   });
-
 });
