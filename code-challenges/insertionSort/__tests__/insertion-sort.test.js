@@ -23,7 +23,7 @@ describe('Insertion Sort', () => {
   it('Returns error when no array', () => {
     const array = [];
     const sortedArray = insertionSort(array);
-    expect(sortedArray).toBe('Invalid Argument');
+    expect(sortedArray).toBe('Empty Array');
   });
 
 });
