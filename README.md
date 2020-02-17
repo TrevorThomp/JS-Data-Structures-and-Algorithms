@@ -8,6 +8,7 @@
 * [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
 * [multipleBracketValidation](/code-challenges/multiBracketValidation)
 * [fizzBuzzTree](/code-challenges/fizzBuzzTree)
+* [insertionSort](/code-challenges/insertionSort)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
