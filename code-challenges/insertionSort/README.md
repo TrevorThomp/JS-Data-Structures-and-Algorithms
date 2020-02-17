@@ -9,6 +9,9 @@ Review the pseudocode below, then trace the algorithm by stepping through the pr
 ## Approach & Efficiency
 The efficiency that was used in the pseudocode is 0(n). The approach is to loop through the array and compare the targeted index with the one before it. If it's less than the number than it will trade places and compare against the next number.
 
+ ## Link to Code
+ * [Code Link](./insertionSort.js)
+ * [Test Link](./__tests__/insertion-sort.test.js)
 
 ## Solution
 ![whiteBoard](./assets/passFive.jpg)
