@@ -1,7 +1,5 @@
 'use strict';
 
-let array = [8,4,23,42,15,16];
-
 function mergeSort(arr) {
 
   if (!arr) return 'No Array Given';
