@@ -15,6 +15,6 @@ describe('Merge Sort', () => {
 
   it('Returns error when given empty array', () => {
     const array = [];
-    expect(mergeSort(array)).toBe(1);
-  })
+    expect(mergeSort(array)).toBe('Empty Array');
+  });
 });
