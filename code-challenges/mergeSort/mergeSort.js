@@ -5,6 +5,7 @@ let array = [8,4,23,42,15,16];
 function mergeSort(arr) {
 
   if (!arr) return 'No Array Given';
+  if (arr.length === 0) return 'Empty Array';
 
   if (arr.length <= 1) { 
     return arr; 

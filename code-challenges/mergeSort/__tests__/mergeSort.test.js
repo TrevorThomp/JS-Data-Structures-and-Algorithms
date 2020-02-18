@@ -13,4 +13,8 @@ describe('Merge Sort', () => {
     expect(mergeSort(array)).toEqual([4,8,15,16,23,42]);
   });
 
+  it('Returns error when given empty array', () => {
+    const array = [];
+    expect(mergeSort(array)).toBe(1);
+  })
 });
