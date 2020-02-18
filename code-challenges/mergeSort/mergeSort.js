@@ -1,37 +1,41 @@
 'use strict';
 
-ALGORITHM Mergesort(arr)
-    DECLARE n <-- arr.length
-           
-    if n > 1
-      DECLARE mid <-- n/2
-      DECLARE left <-- arr[0...mid]
-      DECLARE right <-- arr[mid...n]
-      // sort the left side
-      Mergesort(left)
-      // sort the right side
-      Mergesort(right)
-      // merge the sorted left and right sides together
-      Merge(left, right, arr)
+let array = [8,4,23,42,15,16];
 
+function mergeSort(arr) {
 
+  if (!arr) return 'No Array Given';
 
-ALGORITHM Merge(left, right, arr)
-    DECLARE i <-- 0
-    DECLARE j <-- 0
-    DECLARE k <-- 0
+  if (arr.length <= 1) { 
+    return arr; 
+  }
 
-    while i < left.length && j < right.length
-        if left[i] <= right[j]
-            arr[k] <-- left[i]
-            i <-- i + 1
-        else
-            arr[k] <-- right[j]
-            j <-- j + 1
-            
-        k <-- k + 1
+  let mid = Math.floor(arr.length/2);
+  let left = arr.slice(0, mid);
+  let right = arr.slice(mid);
 
-    if i = left.length
-       set remaining entries in arr to remaining values in right
-    else
-       set remaining entries in arr to remaining values in left
+  return merge(
+    mergeSort(left), mergeSort(right),
+  );
+}
+
+function merge(left, right) {
+  let i = 0;
+  let j = 0;
+  let result = [];
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
+    }
+  }
+  return result
+    .concat(left.slice(i))
+    .concat(right.slice(j));
+}
+
+module.exports = mergeSort;
