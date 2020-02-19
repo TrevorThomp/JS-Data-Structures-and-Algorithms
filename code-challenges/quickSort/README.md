@@ -14,4 +14,4 @@ The efficiency that was used in the pseudocode is 0(n). The approach is to grab 
  * [Test Link](./__tests__/quickSort.test.js)
 
 ## Solution
-![whiteBoard](./assets/passThree.jpg)
+![whiteBoard](./assets/quickSort.jpg)
