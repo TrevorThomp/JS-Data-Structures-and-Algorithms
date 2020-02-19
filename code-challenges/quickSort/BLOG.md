@@ -1,9 +1,6 @@
-### Pass 1:
-![whiteBoard](./assets/passOne.jpg)
-In the first pass through of the quick sort, we take the first half of the array and compare the indexes while swapping the lesser indexes to the first value.
-### Pass 2:
-![whiteBoard](./assets/passTwo.jpg)
-In the second and third pass through, we will compare the right side of the array and sort them in order of their values.
-### Pass 3:
-![whiteBoard](./assets/passThree.jpg)
-In the second and third pass through, we concatenate the two sorted halves of the array and return the merge sorted array.
+### Quick Sort:
+![whiteBoard](./assets/quickSort.jpg)
+
+Quick sort starts by initiliazing a pivot point that will be used to compare values as it recursively iterates through the arrays. Within this given method, the unsorted array will be split into two sides, one that holds the lesser values, and another that will hold the greater values. Within these seperate arrays, there will be two new pivot points assigned so they can be also sorted.
+
+Once the two seperate arrays have been sorted, then they will be concatenated together at the end to return a new array that holds the sorted values.
