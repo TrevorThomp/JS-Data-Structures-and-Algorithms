@@ -9,6 +9,8 @@
 * [multipleBracketValidation](/code-challenges/multiBracketValidation)
 * [fizzBuzzTree](/code-challenges/fizzBuzzTree)
 * [insertionSort](/code-challenges/insertionSort)
+* [mergeSort](/code-challenges/mergeSort)
+* [quickSort](/code-challenges/quickSort)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
