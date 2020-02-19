@@ -7,7 +7,7 @@
 Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article that shows the step-by-step output after each iteration through some sort of visual.
 
 ## Approach & Efficiency
-The efficiency that was used in the pseudocode is 0(n). The approach is to loop through the array and compare the targeted index with the one before it. If it's less than the number than it will trade places and compare against the next number. This happens on both sides of the array and at the end it will concatenate the two sides together in a sorted fashion.
+The efficiency that was used in the pseudocode is 0(n). The approach is to grab a pivot point in each index that will be used to compare the values as it recursively loops through the arrays. Once the array has been pushed into the two empty arrays, then they will be concatenated at the end and returned in a final new array that will have the sorted data.
 
  ## Link to Code
  * [Code Link](./quickSort.js)

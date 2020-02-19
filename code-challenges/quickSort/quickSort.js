@@ -14,13 +14,13 @@ function QuickSort(array) {
 
     for (let i = 0; i < length; i++) {
       if (array[i] <= pivot) {
-        left.push(array[i])
+        left.push(array[i]);
       } else {
-        right.push(array[i])
+        right.push(array[i]);
       }
     }
 
-    return newArray.concat(QuickSort(left), pivot, QuickSort(right))
+    return newArray.concat(QuickSort(left), pivot, QuickSort(right));
   }
 }
 
