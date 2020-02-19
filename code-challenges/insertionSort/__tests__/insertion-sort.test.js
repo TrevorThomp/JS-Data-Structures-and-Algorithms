@@ -7,7 +7,7 @@ describe('Insertion Sort', () => {
   it('Should sort array', () => {
     const array = [8,4,23,42,16,15];
     const sortedArray = insertionSort(array);
-    expect(sortedArray[0]).toBe(4);
+    expect(sortedArray).toEqual([4,8,15,16,23,42]);
   });
 
   it('Returns error when no array', () => {
