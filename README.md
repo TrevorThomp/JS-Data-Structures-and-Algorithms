@@ -17,4 +17,4 @@
 * [stacksQueues](/data-structures/stacksAndQueues)
 * [queuesWithStacks](/data-structures/queueWithStacks)
 * [BinaryTree](/data-structures/tree)
-* [HashTable] (/data-structures/hashTable)
+* [HashTable](/data-structures/hashTable)
