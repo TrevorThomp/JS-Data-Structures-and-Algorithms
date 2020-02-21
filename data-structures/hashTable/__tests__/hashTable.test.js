@@ -83,8 +83,8 @@ describe('Hash Table', () => {
       HashTable.add('key', 'value');
       HashTable.add('yek', 'anotherValue');
 
-      let result = HashTable.hash('key');
-      let result2 = HashTable.hash('yek');
+      HashTable.hash('key');
+      HashTable.hash('yek');
 
       expect(HashTable.get('key')).toBe('value');
       expect(HashTable.get('yek')).toBe('anotherValue');
