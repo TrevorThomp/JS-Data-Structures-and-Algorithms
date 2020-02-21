@@ -47,16 +47,13 @@ describe('Hash Table', () => {
     });
 
     test('Should be able to handle a collision', () => {
-      // arrange
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('key', 'value');
       HashTable.add('yek', 'anotherValue');
 
       let result = HashTable.hash('key');
 
-      // assert
       expect(HashTable.buckets[result].head.value[1]).toBe('value');
       expect(HashTable.buckets[result].head.next.value[1]).toBe('anotherValue');
     });
@@ -64,41 +61,31 @@ describe('Hash Table', () => {
 
   describe('get(key)', () => {
     test('Given a key, should return the value', () => {
-      // arrange
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('foo', 'bar');
       HashTable.add('key', 'value');
 
-      // assert
       expect(HashTable.get('foo')).toBe('bar');
     });
 
     test('Should return null if key does not exist', () => {
-      // arrange
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('key', 'value');
 
-      // assert
       expect(HashTable.get('zjskd')).toBe(null);
     });
 
     test('Should return the value from a bucket within a HashTable that has a collision', () => {
-      // arrange
-      // let HashTable = new HashTable(5);
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('key', 'value');
       HashTable.add('yek', 'anotherValue');
 
       let result = HashTable.hash('key');
       let result2 = HashTable.hash('yek');
 
-      // assert
       expect(HashTable.get('key')).toBe('value');
       expect(HashTable.get('yek')).toBe('anotherValue');
     });
@@ -106,24 +93,18 @@ describe('Hash Table', () => {
 
   describe('contains(key)', () => {
     test('Should return true if the key exists', () => {
-      // arrange
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('key', 'value');
 
-      // assert
       expect(HashTable.contains('key')).toBeTruthy();
     });
 
     test('Should return false if the key does not exists', () => {
-      // arrange
       let HashTable = new Hashmap(5);
 
-      // act
       HashTable.add('yek', 'value');
 
-      // assert
       expect(HashTable.contains('kei')).not.toBeTruthy();
     });
   });
