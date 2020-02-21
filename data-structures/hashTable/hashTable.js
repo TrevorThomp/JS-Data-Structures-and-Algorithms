@@ -98,7 +98,7 @@ class Hashmap {
 
     if (!this.buckets[index])  { return null; }
 
-    return this.buckets[index].getWithKey(key) ? true : false;
+    return this.buckets[index].getKey(key) ? true : false;
   }
 }
 
