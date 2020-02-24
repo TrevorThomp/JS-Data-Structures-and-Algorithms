@@ -75,6 +75,9 @@ class LinkedList {
   }
 }
 
+/**
+ * @class
+ */
 class Hashmap {
   constructor(size) {
     this.size = size || 5,
