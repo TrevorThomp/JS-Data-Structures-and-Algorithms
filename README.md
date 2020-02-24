@@ -11,6 +11,7 @@
 * [insertionSort](/code-challenges/insertionSort)
 * [mergeSort](/code-challenges/mergeSort)
 * [quickSort](/code-challenges/quickSort)
+* [repeatedWords](/code-challenges/repeatedWords)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
