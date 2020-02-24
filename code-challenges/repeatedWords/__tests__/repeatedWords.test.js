@@ -14,4 +14,7 @@ describe('Repeated Words Functionality', () => {
     expect(repeatedWords(string)).not.toBe('a');
   });
 
+  it('Returns error when no string is provided', () => {
+    expect(repeatedWords()).toBe('No String Provided');
+  });
 });
