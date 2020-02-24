@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * @class
+ */
 class Node {
   constructor(value) {
     this.value = value;
@@ -7,11 +10,18 @@ class Node {
   }
 }
 
+/**
+ * @class
+ */
 class LinkedList {
   constructor() {
     this.head = null;
   }
 
+  /**
+   * Adds value to the end of the linked list
+   * @param {*} value 
+   */
   add(value) {
     if(!value) throw new Error('Invalid value');
 
@@ -31,6 +41,11 @@ class LinkedList {
     current.next = node;
   }
 
+  /**
+   * Accepts key and returns value of that key
+   * @param {*} key 
+   * @returns
+   */
   getKey(key) {
     if (!this.head) return;
 
@@ -44,6 +59,9 @@ class LinkedList {
     return;
   }
 
+  /**
+   * Pushes values into array
+   */
   values() {
     let values = [];
     let current = this.head;
@@ -63,12 +81,22 @@ class Hashmap {
     this.buckets = new Array(this.size);
   }
 
+  /**
+   * Returns hashed string value
+   * @param {string} key 
+   * @returns {string}
+   */
   hash(key) {
     return key.split('').reduce((p, n) => {
       return p + n.charCodeAt(0);
     },0) * 599 % this.size;
   }
 
+  /**
+   * Adds key and value to stored buckets array
+   * @param {*} key 
+   * @param {*} value 
+   */
   add(key, value) {
     if (!key) throw new Error('Invalid key provided');
     if (this.contains(key)) return 'Key already being used';
@@ -81,6 +109,11 @@ class Hashmap {
   
   }
 
+  /**
+   * Accepts a key argument and returns the value of the indexed argument
+   * @param {*} key 
+   * @returns Returns the value of the index
+   */
   get(key) {
     if (!key) throw new Error('Invalid key provided');
 
@@ -91,6 +124,11 @@ class Hashmap {
     return this.buckets[index].getKey(key);
   }
 
+  /**
+   * Checks array to see if key exists
+   * @param {*} key 
+   * @returns Returns boolean if key is within current hash table
+   */
   contains(key) {
     if (!key) throw new Error('Invalid key provided');
 
