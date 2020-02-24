@@ -7,7 +7,7 @@ Write a function that accepts a lengthy string parameter.
 Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
 
 ## Approach & Efficiency
-The efficiency that was used is 0(n). The approach is to grab a pivot point in each index that will be used to compare the values as it recursively loops through the arrays. Once the array has been pushed into the two empty arrays, then they will be concatenated at the end and returned in a final new array that will have the sorted data.
+The efficiency that was used is 0(n). The approach is to split the string into an array that is able to be looped through and added to the hash map. During this loop, the function will check to see if the value is already contained in the hash table. If it is, then return that value, if not, then add the value to the hash table.
 
  ## Link to Code
  * [Code Link](./repeatedWords.js)
