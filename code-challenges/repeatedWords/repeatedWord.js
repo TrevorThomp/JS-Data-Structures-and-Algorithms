@@ -15,11 +15,7 @@ const repeatedWords = (string) => {
     }
     hashTable.add(key, value);
   }
-  return 'No words found';
+  return 'No Duplicate Words Found';
 };
-
-const string = 'Well this is a test to see what the this well of array of words looks like this';
-
-console.log(repeatedWords(string))
 
 module.exports = repeatedWords;
