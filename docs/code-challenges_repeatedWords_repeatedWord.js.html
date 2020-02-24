@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/fizzBuzzTree/fizz-buzz-tree.js</title>
+    <title>JSDoc: Source: code-challenges/repeatedWords/repeatedWord.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/fizzBuzzTree/fizz-buzz-tree.js</h1>
+    <h1 class="page-title">Source: code-challenges/repeatedWords/repeatedWord.js</h1>
 
     
 
@@ -28,41 +28,38 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
+const {Hashmap} = require('../../data-structures/hashTable/hashTable');
+
 /**
- * Compares value to modular operator and changes value
- * @param {*} val 
+ * Function accepts str value and converts them into array.
+ * @param {*} str 
+ * @returns Returns array of words
  */
-function fizzBuzz(val) {
-  if (val % 3 === 0 &amp;&amp; val % 5 === 0) {
-    return 'FizzBuzz';
-  } else if (val % 5 === 0) {
-    return 'Buzz';
-  } else if (val % 3 === 0) {
-    return 'Fizz';
-  } else {
-    return val;
-  }
+function _split(str) {
+  return str.match(/\b\w+\b/g);
 }
 
 /**
- * Recursively checks tree nodes and changes values
- * @param {object} tree 
+ * Function takes string and converts to array and stores in hash table. If string is in the hash table, then return the value.
+ * @param {*} string 
  */
-function fizzBuzzTreeBuzz(tree) {
-  if(!tree) {
-    return 'No tree value';
+const repeatedWords = (string) => {
+  if (!string) return 'No String Provided';
+
+  let hashTable = new Hashmap();
+  let arrayWords = _split(string);
+  for(let i = 0; i &lt; arrayWords.length; i++){
+    let value = arrayWords[i];
+    let key = value;
+    if(hashTable.contains(value)){
+      return value;
+    }
+    hashTable.add(key, value);
   }
+  return 'No Duplicate Words Found';
+};
 
-  let recursive = node => {
-    if (node.left) recursive(node.left);
-    node.val = fizzBuzz(node.val);
-    if (node.right) recursive(node.right);
-  };
-  recursive(tree.root);
-  return tree;
-}
-
-module.exports = fizzBuzzTreeBuzz;</code></pre>
+module.exports = repeatedWords;</code></pre>
         </article>
     </section>
 
