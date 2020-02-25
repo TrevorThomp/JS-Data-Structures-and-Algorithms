@@ -10,9 +10,13 @@
 * [fizzBuzzTree](/code-challenges/fizzBuzzTree)
 * [insertionSort](/code-challenges/insertionSort)
 * [treeIntersection](/code-challenges/treeIntersection)
+* [mergeSort](/code-challenges/mergeSort)
+* [quickSort](/code-challenges/quickSort)
+* [repeatedWords](/code-challenges/repeatedWords)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
 * [stacksQueues](/data-structures/stacksAndQueues)
 * [queuesWithStacks](/data-structures/queueWithStacks)
 * [BinaryTree](/data-structures/tree)
+* [HashTable](/data-structures/hashTable)
