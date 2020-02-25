@@ -89,6 +89,7 @@ class Hashmap {
    * @returns {string}
    */
   hash(key) {
+    key = key.toString();
     return key.split('').reduce((p, n) => {
       return p + n.charCodeAt(0);
     },0) * 599 % this.size;
@@ -100,7 +101,7 @@ class Hashmap {
    * @param {*} value 
    */
   add(key, value) {
-    if (!key) throw new Error('Invalid key provided');
+    // if (!key) throw new Error('Invalid key provided');
     if (this.contains(key)) return 'Key already being used';
 
     let index = this.hash(key);
