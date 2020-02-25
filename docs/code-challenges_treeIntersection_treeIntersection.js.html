@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: code-challenges/03-arrayBinarySearch/array-binary-search.js</title>
+    <title>JSDoc: Source: code-challenges/treeIntersection/treeIntersection.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: code-challenges/03-arrayBinarySearch/array-binary-search.js</h1>
+    <h1 class="page-title">Source: code-challenges/treeIntersection/treeIntersection.js</h1>
 
     
 
@@ -28,36 +28,37 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict';
 
+const {Hashmap} = require('../../data-structures/hashTable/hashTable');
+
 /**
- * @function
- * @param {Array} arr 
- * @param {*} key 
- * @returns value
+ * Function iterates through trees and compares values
+ * @param {*} treeOne 
+ * @param {*} treeTwo 
  */
-function binarySearch(arr,key) {
-  let left = 0;
-  let right = arr.length -1;
+function treeIntersect(treeOne, treeTwo) {
+  if (!treeOne.root || !treeTwo.root) return 'Not a valid tree';
 
-  while (left &lt;= right) {
+  const arr = [];
+  const HT = new Hashmap(1);
+  let add;
 
-    let middle = Math.floor((left + right) / 2);
+  let traverse = node => {
+    if (node.left) traverse(node.left);
+    if(node.val) {
+      add = HT.add(node.val, node.val);
+    }
+    if (add === 'Key already being used') arr.push(node.val);
+    if(node.right) traverse(node.right);
+  };
 
-    if (key === arr[middle]) {
-      return middle;
-    }
-      
-    if (key &lt; arr[middle]) {
-      right = middle - 1;
-    }
-    
-    if (key > arr[middle]) {
-      left = middle + 1;
-    }
-  }
-  return -1;
+
+  traverse(treeOne.root);
+  traverse(treeTwo.root);
+
+  return arr;
 }
 
-module.exports = binarySearch;</code></pre>
+module.exports = treeIntersect;</code></pre>
         </article>
     </section>
 

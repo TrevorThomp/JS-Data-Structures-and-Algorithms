@@ -2,6 +2,11 @@
 
 const {Hashmap} = require('../../data-structures/hashTable/hashTable');
 
+/**
+ * Function iterates through trees and compares values
+ * @param {*} treeOne 
+ * @param {*} treeTwo 
+ */
 function treeIntersect(treeOne, treeTwo) {
   if (!treeOne.root || !treeTwo.root) return 'Not a valid tree';
 
