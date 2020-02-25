@@ -1,9 +1,10 @@
 'use strict';
 
 const {Hashmap} = require('../../data-structures/hashTable/hashTable');
-const {BinarySearchTree} = require('../../data-structures/tree/tree');
 
 function treeIntersect(treeOne, treeTwo) {
+  if (!treeOne.root || !treeTwo.root) return 'Not a valid tree';
+
   const arr = [];
   const HT = new Hashmap(1);
   let add;
@@ -24,15 +25,4 @@ function treeIntersect(treeOne, treeTwo) {
   return arr;
 }
 
-let BST = new BinarySearchTree();
-let test = new BinarySearchTree();
-
-BST.add(10)
-BST.add(2)
-BST.add(3)
-
-test.add(10)
-test.add(4)
-test.add(5)
-
-console.log(treeIntersect(BST,test))
+module.exports = treeIntersect;
