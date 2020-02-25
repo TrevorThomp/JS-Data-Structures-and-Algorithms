@@ -26,8 +26,8 @@ The approach I took was creating a Node, Stack and PseudoQueue class. Within the
 * `contains(key)` - Returns boolean if hash table contains key
 
 ## Links
-* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/16)
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/145280014)
+* [submissionPR](https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/pull/29)
+* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms/builds/150099740)
 * [docs](/docs)
 
 ## Links to Code
