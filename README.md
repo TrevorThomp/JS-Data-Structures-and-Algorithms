@@ -9,6 +9,7 @@
 * [multipleBracketValidation](/code-challenges/multiBracketValidation)
 * [fizzBuzzTree](/code-challenges/fizzBuzzTree)
 * [insertionSort](/code-challenges/insertionSort)
+* [treeIntersection](/code-challenges/treeIntersection)
 * [mergeSort](/code-challenges/mergeSort)
 * [quickSort](/code-challenges/quickSort)
 * [repeatedWords](/code-challenges/repeatedWords)
