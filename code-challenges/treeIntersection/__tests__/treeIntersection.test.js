@@ -37,7 +37,7 @@ describe('treeIntersection(tree1, tree2)', () => {
 
   test('Should not modify the trees', () => {
     let result = treeIntersect(tree1, tree2);
-    console.log(tree2)
+
     expect(tree1.root.val).toBe(10);
     expect(tree2.root.val).toBe(5);
     expect(result).toEqual([5,10,20]);

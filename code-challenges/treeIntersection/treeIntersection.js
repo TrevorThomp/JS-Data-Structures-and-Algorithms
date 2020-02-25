@@ -12,10 +12,10 @@ function treeIntersect(treeOne, treeTwo) {
   let traverse = node => {
     if (node.left) traverse(node.left);
     if(node.val) {
-      add = HT.add(node.val, node.val)
+      add = HT.add(node.val, node.val);
     }
-    if (add === 'Key already being used') arr.push(node.val)
-    if(node.right) traverse(node.right)
+    if (add === 'Key already being used') arr.push(node.val);
+    if(node.right) traverse(node.right);
   };
 
 
