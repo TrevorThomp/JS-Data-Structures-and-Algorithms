@@ -1,5 +1,4 @@
 'use strict';
-const {HashMap} = require('../../data-structures/hashTable/hashTable');
 
 function leftJoin(left, right){
   const joinedData = [];

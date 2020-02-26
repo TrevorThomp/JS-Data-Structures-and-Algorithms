@@ -1,17 +1,17 @@
-const {HashMap} = require('../../../data-structures/hashTable/hashTable');
+const {Hashmap} = require('../../../data-structures/hashTable/hashTable');
 const leftJoin = require('../leftJoin');
 
 describe('Left Join tests', ()=>{
   it('should return an empty array if passed empty hash maps', ()=>{
-    const mapA = new HashMap();
-    const mapB = new HashMap();
+    const mapA = new Hashmap();
+    const mapB = new Hashmap();
 
     expect(leftJoin(mapA, mapB)).toEqual([]);
   });
 
   it('should join two maps', ()=> {
-    const mapA = new HashMap();
-    const mapB = new HashMap();
+    const mapA = new Hashmap();
+    const mapB = new Hashmap();
 
     mapA.add('fond', 'enamored');
     mapA.add('wrath', 'anger');
