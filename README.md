@@ -13,6 +13,7 @@
 * [mergeSort](/code-challenges/mergeSort)
 * [quickSort](/code-challenges/quickSort)
 * [repeatedWords](/code-challenges/repeatedWords)
+*[leftJoin](/code-challenges/leftJoin)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
