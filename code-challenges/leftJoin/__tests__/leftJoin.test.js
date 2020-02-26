@@ -26,6 +26,6 @@ describe('Left Join tests', ()=>{
   });
 
   it('should return 1 if the parameters are not of type HashTable', () => {
-    expect(leftJoin('left', 'right')).toEqual(1);
+    expect(leftJoin('left', 'right')).toEqual('Not Valid Argument');
   });
 });

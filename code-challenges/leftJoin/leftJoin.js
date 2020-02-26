@@ -2,6 +2,8 @@
 
 function leftJoin(left, right){
   const joinedData = [];
+  if (typeof(left) !== 'object' && typeof(right) !== 'object') return 'Not Valid Argument'
+
   left.buckets.forEach(bucket => {
     //console.log(bucket.head.value);
     let key = bucket.head.value[0];
