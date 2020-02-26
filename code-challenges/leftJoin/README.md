@@ -1,8 +1,14 @@
 # Challenge Summary
-Write a function that takes returns values in Binary Tree.
+Write a function that takes two Hash Tables and combines them in a left to right order.
 
 ## Challenge Description
-Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+* Write a function that LEFT JOINs two hashmaps into a single data structure.
+* The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+* The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+* Combine the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic.
+* LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row. If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.
+* The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic.
+* Avoid utilizing any of the library methods available to your language.
 
 ## Approach & Efficiency
 The approach is a 0(n) efficiency. The approach is to create an empty array that gets values pushed into it was the function iterates through the left hash table. During the iteration, the values from the second hash table will be pushed into the array and that array will be returned with all the appropriate values.
