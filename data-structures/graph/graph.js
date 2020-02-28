@@ -29,7 +29,15 @@ class Graph{
     this.adjacencyList = new Map();
   }
 
-  addVertex(value){
+  addNode(node) {
+    this.adjacencyList.set(node, []);
+  }
+
+  addEdge() {
+
+  }
+
+  addValue(value){
   
   }
   //directed edge add
@@ -52,6 +60,7 @@ class Graph{
   }
 
   size(){
+    return this.adjacencyList.size();
   //count of number of vertices in the graph
   }
 }
