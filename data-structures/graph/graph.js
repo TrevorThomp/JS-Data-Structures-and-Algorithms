@@ -1,19 +1,11 @@
 'use strict';
 
-const util = require('util');
-
-/**
- * @class
- */
 class Vertex {
   constructor(value){
     this.value = value;
   }
 }
 
-/**
- * @class
- */
 class Edge {
   constructor(vertex, weight){
     this.vertex = vertex;
@@ -21,37 +13,42 @@ class Edge {
   }
 }
 
-/**
- * @class
- */
-class Graph{
-  constructor() {
-    this.adjacencyList = new Map();
-  }
-
-  addNode(node) {
-    this.adjacencyList.set(node, []);
+class Graph {
+  constructor(){
+    this._adjacencyList = new Map();
   }
 
   addValue(value){
     this.addNode(new Vertex(value));
-  //directed edge add
   }
-  addDirectedEdge( startVertex, endVertex, weight=0) {
-    if (!this.adjacencyList.has(startVertex) || !this.adjacencyList.has(endVertex)) return 'Error';
-    //make sure vertices exist
 
-    //get/retrieve what's currently in my map object at the specified vertex - startVertex.
-    //for that startVertex, push into the corresponding array (array is the value in the key:value pair)
-    const adjacencies = this.adjacencyList.get(startVertex);
+  addNode(vertex){
+    this._adjacencyList.set(vertex, []);
+  }
+
+  addEdge(startVertex, endVertex, weight = 0){
+    if(!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)){
+      throw new Error('ERROR: Invalid Vertices');
+    }
+
+    const adjacencies = this._adjacencyList.get(startVertex);
     adjacencies.push(new Edge(endVertex, weight));
   }
-  getNeighbors(value) {
-    //for given vertex argument, return all of its neighbors
-    return [...this.adjacencyList.get(value)];
+
+  addBiDirectionalEdge(vertex_a, vertex_b, weight = 0){
+    this.addEdge(vertex_a, vertex_b, weight);
+    this.addEdge(vertex_b, vertex_a, weight);
   }
 
-  getVertices(){
+  getNeighbors(vertex){
+    if(!this._adjacencyList.has(vertex)){
+      throw new Error('ERROR: Invalid vertex', vertex);
+    }
+
+    return [...this._adjacencyList.get(vertex)];
+  }
+
+  getValues(){
     let nodes = [ ...this._adjacencyList.keys() ];
     let result =[];
     nodes.map(key => {
@@ -61,10 +58,21 @@ class Graph{
     return result;
   }
 
-  size(){
-    return this.adjacencyList.size();
-  //count of number of vertices in the graph
+  getNodes(){
+    let nodes = [ ...this._adjacencyList.keys() ];
+    return nodes;
   }
+
+  size(){
+    return this._adjacencyList.size;
+  }
+
+  printGraph(){
+    for (let [key, value] of this._adjacencyList) {
+      console.log(key.value, value);
+    }
+  }
+
 }
 
-module.export = Graph;
+module.exports = {Graph, Vertex, Edge};
