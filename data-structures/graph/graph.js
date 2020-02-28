@@ -33,30 +33,32 @@ class Graph{
     this.adjacencyList.set(node, []);
   }
 
-  addEdge() {
-
-  }
-
   addValue(value){
-  
-  }
+    this.addNode(new Vertex(value));
   //directed edge add
+  }
   addDirectedEdge( startVertex, endVertex, weight=0) {
-
+    if (!this.adjacencyList.has(startVertex) || !this.adjacencyList.has(endVertex)) return 'Error';
     //make sure vertices exist
 
     //get/retrieve what's currently in my map object at the specified vertex - startVertex.
     //for that startVertex, push into the corresponding array (array is the value in the key:value pair)
-
-
+    const adjacencies = this.adjacencyList.get(startVertex);
+    adjacencies.push(new Edge(endVertex, weight));
   }
   getNeighbors(value) {
     //for given vertex argument, return all of its neighbors
-
+    return [...this.adjacencyList.get(value)];
   }
 
   getVertices(){
-  //returns all of the vertices in the graph data structure
+    let nodes = [ ...this._adjacencyList.keys() ];
+    let result =[];
+    nodes.map(key => {
+      key = key.value;
+      result.push(key);
+    });
+    return result;
   }
 
   size(){
