@@ -1,11 +1,17 @@
 'use strict';
 
+/**
+ * @class
+ */
 class Vertex {
   constructor(value){
     this.value = value;
   }
 }
 
+/**
+ * @class
+ */
 class Edge {
   constructor(vertex, weight){
     this.vertex = vertex;
@@ -13,43 +19,63 @@ class Edge {
   }
 }
 
+/**
+ * @class
+ */
 class Graph {
   constructor(){
-    this._adjacencyList = new Map();
+    this.adjacencyList = new Map();
   }
 
+  /**
+   * Adds new value vertex
+   * @param {*} value 
+   */
   addValue(value){
     this.addNode(new Vertex(value));
   }
 
+  /**
+   * Adds a vertex to the adjacency list
+   * @param {A} vertex 
+   */
   addNode(vertex){
-    this._adjacencyList.set(vertex, []);
+    this.adjacencyList.set(vertex, []);
   }
 
+  /**
+   * Adds edges between the start and end vertex
+   * @param {*} startVertex 
+   * @param {*} endVertex 
+   * @param {*} weight 
+   */
   addEdge(startVertex, endVertex, weight = 0){
-    if(!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)){
+    if(!this.adjacencyList.has(startVertex) || !this.adjacencyList.has(endVertex)){
       throw new Error('ERROR: Invalid Vertices');
     }
 
-    const adjacencies = this._adjacencyList.get(startVertex);
+    const adjacencies = this.adjacencyList.get(startVertex);
     adjacencies.push(new Edge(endVertex, weight));
   }
 
-  addBiDirectionalEdge(vertex_a, vertex_b, weight = 0){
-    this.addEdge(vertex_a, vertex_b, weight);
-    this.addEdge(vertex_b, vertex_a, weight);
-  }
-
+  /**
+   * Retrieves neighbors of the given vertex
+   * @param {*} vertex 
+   */
   getNeighbors(vertex){
-    if(!this._adjacencyList.has(vertex)){
+    if(!this.adjacencyList.has(vertex)){
       throw new Error('ERROR: Invalid vertex', vertex);
     }
 
-    return [...this._adjacencyList.get(vertex)];
+    return [...this.adjacencyList.get(vertex)];
   }
 
+  /**
+   * Returns values of the graph
+   * @returns {Array}
+   */
   getValues(){
-    let nodes = [ ...this._adjacencyList.keys() ];
+    let nodes = [ ...this.adjacencyList.keys() ];
     let result =[];
     nodes.map(key => {
       key = key.value;
@@ -58,21 +84,21 @@ class Graph {
     return result;
   }
 
+  /**
+   * Retrieves key value pairs of the adjacencyList
+   * @returns {Array}
+   */
   getNodes(){
-    let nodes = [ ...this._adjacencyList.keys() ];
+    let nodes = [ ...this.adjacencyList.keys() ];
     return nodes;
   }
 
+  /**
+   * Returns the total size of the adjacencyList
+   */
   size(){
-    return this._adjacencyList.size;
+    return this.adjacencyList.size;
   }
-
-  printGraph(){
-    for (let [key, value] of this._adjacencyList) {
-      console.log(key.value, value);
-    }
-  }
-
 }
 
 module.exports = {Graph, Vertex, Edge};

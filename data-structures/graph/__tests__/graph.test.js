@@ -8,13 +8,13 @@ describe('Graphs', () => {
   const graph = new Graph();
 
   afterEach(() => {
-    graph._adjacencyList.clear();
+    graph.adjacencyList.clear();
   });
 
   it('addNode() Node can be successfully added to the graph', () => {
     let oneVertex = new Vertex(1);
     graph.addNode(oneVertex);
-    expect(graph._adjacencyList.get(oneVertex)).toEqual([]);
+    expect(graph.adjacencyList.get(oneVertex)).toEqual([]);
   });
 
   it('addEdge() An edge can be successfully added to the graph', () => {
@@ -25,7 +25,7 @@ describe('Graphs', () => {
     graph.addEdge(oneVertex, twoVertex);
 
     let expected = [new Edge(new Vertex(2),0)];
-    expect(graph._adjacencyList.get(oneVertex)).toStrictEqual(expected);
+    expect(graph.adjacencyList.get(oneVertex)).toStrictEqual(expected);
   });
 
   it('getNodes() should return array of vertex', () => {
