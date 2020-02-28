@@ -1,9 +1,8 @@
 'use strict';
 
-const GraphFunctions = require('../graph');
-const Graph = GraphFunctions.Graph;
-const Vertex = GraphFunctions.Vertex;
-const Edge = GraphFunctions.Edge;
+const {Graph} = require('../graph');
+const {Vertex} = require('../graph');
+const {Edge} = require('../graph');
 
 describe('Graphs', () => {
   const graph = new Graph();
