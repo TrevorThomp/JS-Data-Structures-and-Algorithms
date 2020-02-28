@@ -26,6 +26,7 @@
   "homepage": "https://github.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms#readme",
   "dependencies": {
     "eslint": "^6.8.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "util": "^0.12.2"
   }
 }
