@@ -1,6 +1,6 @@
 'use strict';
 
-const {Graph, Vertex, Edge} = require('../graph-bfs');
+const {Graph, Vertex} = require('../graph-bfs');
 
 describe('Graph Breadth First', () => {
 

@@ -111,14 +111,14 @@ class Graph {
     if (this.size() === 0) return 'Graph is empty';
 
     let visitedVertices = new Set();
-    let queue = [];
+    let queue = new Queue();
     let results = [];
 
-    queue.push(startNode);
+    queue.enqueue(startNode);
     visitedVertices.add(startNode);
 
     while(queue.length){
-      let deQueue = queue.shift();
+      let deQueue = queue.dequeue();
 
       results.push(deQueue);
       visitedVertices.add(deQueue);
@@ -134,26 +134,11 @@ class Graph {
           visitedVertices.add(neighbor);
         }
 
-        queue.push(neighbor);
+        queue.enqueue(neighbor);
       }
     }
     return results;
   }
 }
-
-let graph = new Graph();
-let oneVertex = new Vertex(1);
-let twoVertex = new Vertex(2);
-let threeVertex = new Vertex(3);
-let fourVertex = new Vertex(4);
-graph.addNode(oneVertex);
-graph.addNode(twoVertex);
-graph.addNode(threeVertex);
-graph.addNode(fourVertex);
-graph.addEdge(oneVertex, twoVertex);
-graph.addEdge(oneVertex, threeVertex);
-graph.addEdge(threeVertex, fourVertex);
-
-console.log(graph.bfs(oneVertex))
 
 module.exports = {Graph, Vertex, Edge};
