@@ -13,3 +13,4 @@ The approach was to create a set and two empty arrays that will hold the values 
 
 ## Solution
 ![whiteBoard](./assets/whiteboardOne.jpg)
+![whiteBoard](./assets/whiteboardTwo.jpg)
