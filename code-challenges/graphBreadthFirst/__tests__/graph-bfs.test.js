@@ -1,28 +1,34 @@
 'use strict';
 
-const {Graph} = require('../graph-bfs');
-// const {Queue} = require('../../../data-structures/stacksAndQueues/stacks-and-queues');
+const {Graph, Vertex, Edge} = require('../graph-bfs');
 
-describe('Breadth First', () => {
+describe('Graph Breadth First', () => {
 
-  it('Should return items in order', () => {
-    let tree = new BinarySearchTree(3);
-    tree.add(2);
-    tree.add(1);
-    tree.add(3);
-    tree.add(4);
-    expect(breadthFirst(tree)).toEqual([3,2,4,1]);
+  let graph;
+  let oneVertex;
+  beforeEach(() => {
+    graph = new Graph();
+    oneVertex = new Vertex(1);
+    let twoVertex = new Vertex(2);
+    let threeVertex = new Vertex(3);
+    let fourVertex = new Vertex(4);
+    graph.addNode(oneVertex);
+    graph.addNode(twoVertex);
+    graph.addNode(threeVertex);
+    graph.addNode(fourVertex);
+    graph.addEdge(oneVertex, twoVertex);
+    graph.addEdge(oneVertex, threeVertex);
+    graph.addEdge(threeVertex, fourVertex);
   });
 
-  it('Returns null if no tree', () => {
-    let tree = new BinarySearchTree();
-    expect(breadthFirst(tree)).toEqual([null]);
+  it('Returns values in graph in BFS', () => {
+    let set = [
+      { value: 1 },
+      { value: 2 },
+      { value: 3 },
+      { value: 4 },
+    ];
+    expect(graph.bfs(oneVertex)).toEqual(set);
   });
-
-  it('Returns value of a single node', () => {
-    let tree = new BinarySearchTree(1);
-    expect(breadthFirst(tree)).toEqual([1]);
-  });
-
 
 });

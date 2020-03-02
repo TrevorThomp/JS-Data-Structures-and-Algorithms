@@ -132,7 +132,7 @@ class Graph {
         queue.push(neighbor);
       }
     }
-    return visitedVertices;
+    return results;
   }
 }
 
