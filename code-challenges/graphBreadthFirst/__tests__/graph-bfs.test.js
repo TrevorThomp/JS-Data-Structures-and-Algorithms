@@ -31,4 +31,13 @@ describe('Graph Breadth First', () => {
     expect(graph.bfs(oneVertex)).toEqual(set);
   });
 
+  it('Returns error on invalid start node', () => {
+    expect(graph.bfs('test')).toEqual('Invalid Node');
+  });
+
+  it('Returns error on invalid start node', () => {
+    const graphTwo = new Graph();
+    expect(graphTwo.bfs(oneVertex)).toEqual('Graph is empty');
+  });
+
 });

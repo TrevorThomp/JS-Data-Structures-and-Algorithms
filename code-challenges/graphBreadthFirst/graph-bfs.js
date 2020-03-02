@@ -102,8 +102,13 @@ class Graph {
     return this.adjacencyList.size;
   }
 
+  /**
+   * Searches through graph in a breadth first fashion
+   * @param {object} startNode 
+   */
   bfs(startNode){
-    if (this.listSize === 0 || typeof startNode !== 'object') return null;
+    if (typeof startNode !== 'object') return 'Invalid Node';
+    if (this.size() === 0) return 'Graph is empty';
 
     let visitedVertices = new Set();
     let queue = [];
