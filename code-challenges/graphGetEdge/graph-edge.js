@@ -11,7 +11,6 @@ module.exports = (destinations, graph) => {
   let vertexLocation = graph.getNodes();
   let vertexLocationValue = vertexLocation.map(key => key.value);
   for(let location of destinations){
-    console.log(location);
     if(!vertexLocationValue.includes(location)){
       throw new Error('A location does not match our records');
     }
