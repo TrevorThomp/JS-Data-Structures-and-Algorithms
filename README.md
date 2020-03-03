@@ -14,6 +14,7 @@
 * [quickSort](/code-challenges/quickSort)
 * [repeatedWords](/code-challenges/repeatedWords)
 * [leftJoin](/code-challenges/leftJoin)
+* [graphBreadthFirst](/code-challenges/graphBreadthFirst)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
