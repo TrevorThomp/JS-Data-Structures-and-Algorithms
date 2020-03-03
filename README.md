@@ -15,6 +15,7 @@
 * [repeatedWords](/code-challenges/repeatedWords)
 * [leftJoin](/code-challenges/leftJoin)
 * [graphBreadthFirst](/code-challenges/graphBreadthFirst)
+* [graphEdgeFirst](/code-challenges/graphGetEdge)
 
 ## Data Structures
 * [linkedList](/data-structures/linkedList)
