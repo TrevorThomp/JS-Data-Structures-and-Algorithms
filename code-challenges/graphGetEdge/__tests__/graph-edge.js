@@ -22,14 +22,14 @@ describe('getEdge', () => {
   });
 
   it('should throw an error. Missing city in map', () => {
-    let lumioseCity = new Vertex('Lumiose City');
-    let cinnabarIsland = new Vertex('Cinnabar Island');
+    let lumioseCity = new Vertex('Bend');
+    let cinnabarIsland = new Vertex('Portland');
 
     graph.addNode(lumioseCity);
     graph.addNode(cinnabarIsland);
     graph.addEdge(lumioseCity, cinnabarIsland);
 
-    let destinations = ['Lumiose City', 'Cinnabar Island'];
+    let destinations = ['Bend', 'Portland'];
 
     expect(()=>{
       graph.getEdge(destinations).toThrow();
