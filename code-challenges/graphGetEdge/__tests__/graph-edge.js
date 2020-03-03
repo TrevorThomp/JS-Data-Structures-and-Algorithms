@@ -1,7 +1,6 @@
 'use strict';
 
 const {Graph, Vertex} = require('../../graphBreadthFirst/graph-bfs');
-
 const getEdge = require('../graph-edge');
 
 describe('getEdge', () => {
@@ -20,13 +19,6 @@ describe('getEdge', () => {
     let destinations = ['One', 'Two','Three'];
     let result = getEdge(destinations, graph);
     expect(result).toEqual(55);
-  });
-
-  it('should return one result if only one added', () => {
-    let airplaneVertex = new Vertex('Airplane');
-
-    let result = graph.bfs(airplaneVertex);
-    expect(result).toEqual(['Airplane']);
   });
 
   it('should throw an error. Missing city in map', () => {
