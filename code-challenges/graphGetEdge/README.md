@@ -13,4 +13,3 @@ The approach was to first test if the location exists in the graph. If the locat
 
 ## Solution
 ![whiteBoard](./assets/whiteboardOne.jpg)
-![whiteBoard](./assets/whiteboardTwo.jpg)
