@@ -1,28 +1,23 @@
 'use strict';
 
-const {Graph, Vertex} = require('../graph-bfs');
+const {Graph, Vertex} = require('../../graphBreadthFirst/graph-bfs');
 
 const getEdge = require('../graph-edge');
 
 describe('getEdge', () => {
   const graph = new Graph();
 
-  afterEach(() => {
-    graph._adjacencyList.clear();
-  });
-
   it('getEdge()', () => {
-    let lumioseCity = new Vertex('Lumiose City');
-    let cinnabarIsland = new Vertex('Cinnabar Island');
-    let palletTown = new Vertex('Pallet Town');
-    graph.addNode(lumioseCity);
-    graph.addNode(cinnabarIsland);
-    graph.addNode(palletTown);
-    graph.addEdge(lumioseCity, cinnabarIsland, 43);
-    graph.addEdge(cinnabarIsland, palletTown, 12);
+    let nodeOne = new Vertex('One');
+    let nodeTwo = new Vertex('Two');
+    let nodeThree = new Vertex('Three');
+    graph.addNode(nodeOne);
+    graph.addNode(nodeTwo);
+    graph.addNode(nodeThree);
+    graph.addEdge(nodeOne, nodeTwo, 43);
+    graph.addEdge(nodeTwo, nodeThree, 12);
 
-    let destinations = ['Lumiose City', 'Cinnabar Island','Pallet Town'];
-    // graph.printGraph();
+    let destinations = ['One', 'Two','Three'];
     let result = getEdge(destinations, graph);
     expect(result).toEqual(55);
   });
@@ -30,7 +25,7 @@ describe('getEdge', () => {
   it('should return one result if only one added', () => {
     let airplaneVertex = new Vertex('Airplane');
 
-    let result = graph.breadthFirst(airplaneVertex);
+    let result = graph.bfs(airplaneVertex);
     expect(result).toEqual(['Airplane']);
   });
 

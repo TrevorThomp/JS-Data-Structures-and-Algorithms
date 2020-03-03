@@ -2,7 +2,7 @@
 
 module.exports = (destinations, graph) => {
   for(let location of destinations){
-    if(graph._adjacencyList.has(location)){
+    if(graph.adjacencyList.has(location)){
       throw new Error('A location does not match our records');
     }
   }
