@@ -8,7 +8,7 @@ const depthFirst = require('../graph-dfs');
 describe('Depth First Search', () => {
 
   const graph = new Graph();
-  it('', () => {
+  it('Graph traverses properly', () => {
     let vertexA = new Vertex('A');
     let vertexB = new Vertex('B');
     let vertexC = new Vertex('C');
@@ -29,5 +29,9 @@ describe('Depth First Search', () => {
     expect(result[3]).toEqual(vertexD);
 
   });
+
+  it('Returns error when improper data type', () => {
+    expect(depthFirst(1)).toEqual('Invalid Graph')
+  })
 
 });

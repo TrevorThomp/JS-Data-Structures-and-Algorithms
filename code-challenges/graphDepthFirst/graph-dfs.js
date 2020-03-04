@@ -1,15 +1,15 @@
 'use strict';
 
-const {Stack} = require('../../data-structures/stacksAndQueues/stacks-and-queues');
-
+/**
+ * 
+ * @param {*} graph 
+ */
 function depthFirst(graph) {
 
   if(typeof graph === 'string' || typeof graph === 'number'){
-    return 'invalid graph';
+    return 'Invalid Graph';
   }
-  else if(graph.size() < 1){
-    return 'invalid graph';
-  }
+
   const stack = [];
   const visitedVertices = new Set();
   let result = [];
