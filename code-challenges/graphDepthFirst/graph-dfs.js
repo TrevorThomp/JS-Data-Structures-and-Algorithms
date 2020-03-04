@@ -1,30 +1,37 @@
 'use strict';
 
-const Stack = require('../../data-structures/stacksAndQueues/stacks-and-queues');
+const {Stack} = require('../../data-structures/stacksAndQueues/stacks-and-queues');
 
-module.exports = graph => {
-  let stack = new Stack();
-  let output = [];
-  let visited = [];
+function depthFirst(graph) {
 
-  let startVertex = graph.adjacencyList.keys().next().value;
+  if(typeof graph === 'string' || typeof graph === 'number'){
+    return 'invalid graph';
+  }
+  else if(graph.size() < 1){
+    return 'invalid graph';
+  }
+  const stack = [];
+  const visitedVertices = new Set();
+  let result = [];
+  let coolArray = graph.getNodes();
+  let startVertex = coolArray[0];
   stack.push(startVertex);
-  visited.push(startVertex);
-  output.push(startVertex.value);
-
-  while(stack.peek()){
-
-    let neighborsArr = graph.getNeighbors(startVertex);
-    for(let neighbor of neighborsArr){
-      if(!visited.includes(neighbor)){
-        stack.push(neighbor);
-        visited.push(neighbor);
-        output.push(neighbor);
-        startVertex = neighbor;
-        break;
-      } else {
-        stack.pop();
+  visitedVertices.add(startVertex);
+  while(stack.length){
+    let currentVertex = stack.pop();
+    result.push(currentVertex);
+    let neighbors = graph.getNeighbors(currentVertex);
+    for(let edge of neighbors){
+      let neighborVertex = edge.vertex;
+      if(visitedVertices.has(neighborVertex)){
+        continue;
+      }else{
+        visitedVertices.add(neighborVertex);
       }
+      stack.push(neighborVertex);
     }
   }
-};
+  return result;
+}
+
+module.exports = depthFirst;

@@ -1,11 +1,11 @@
 'use strict';
 
-const {Graph, Vertex} = require('../../../data-structures/graph/graph');
+const {Graph, Vertex} = require('../../graphBreadthFirst/graph-bfs');
 
 
 const depthFirst = require('../graph-dfs');
 
-describe('depthFirst\'s', () => {
+describe('Depth First Search', () => {
 
   const graph = new Graph();
   it('', () => {
@@ -22,9 +22,11 @@ describe('depthFirst\'s', () => {
     graph.addBiDirectionalEdge(vertexA, vertexC);
     graph.addBiDirectionalEdge(vertexC, vertexD);
     graph.addBiDirectionalEdge(vertexA, vertexB);
-
     let result = depthFirst(graph);
-    expect(result).toEqual(vertexA);
+    expect(result[0]).toEqual(vertexA);
+    expect(result[1]).toEqual(vertexB);
+    expect(result[2]).toEqual(vertexC);
+    expect(result[3]).toEqual(vertexD);
 
   });
 

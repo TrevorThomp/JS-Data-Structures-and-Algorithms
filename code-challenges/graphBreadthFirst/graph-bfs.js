@@ -87,6 +87,17 @@ class Graph {
   }
 
   /**
+   * 
+   * @param {*} vertex_a 
+   * @param {*} vertex_b 
+   * @param {*} weight 
+   */
+  addBiDirectionalEdge(vertex_a, vertex_b, weight = 0){
+    this.addEdge(vertex_a, vertex_b, weight);
+    this.addEdge(vertex_b, vertex_a, weight);
+  }
+
+  /**
    * Retrieves key value pairs of the adjacencyList
    * @returns {Array}
    */
