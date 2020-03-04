@@ -31,7 +31,7 @@ describe('Depth First Search', () => {
   });
 
   it('Returns error when improper data type', () => {
-    expect(depthFirst(1)).toEqual('Invalid Graph')
+    expect(depthFirst(1)).toEqual('Invalid Graph');
   });
 
 });
