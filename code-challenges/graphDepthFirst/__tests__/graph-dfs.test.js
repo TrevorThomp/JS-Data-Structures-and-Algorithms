@@ -1,30 +1,31 @@
 'use strict';
 
-const Stack = require('../../../data-structures/stacksAndQueues/stacks-and-queues');
+const {Graph, Vertex} = require('../../../data-structures/graph/graph');
 
-module.exports = (graph) => {
-  let stack = new Stack();
-  let output = [];
-  let visited = [];
 
-  let startVertex = graph.adjacencyList.keys().next().value;
-  stack.push(startVertex);
-  visited.push(startVertex);
-  output.push(startVertex.value);
+const depthFirst = require('../graph-dfs');
 
-  while(stack.peek()){
+describe('depthFirst\'s', () => {
 
-    let neighborsArr = graph.getNeighbors(startVertex);
-    for(let neighbor of neighborsArr){
-      if(!visited.includes(neighbor)){
-        stack.push(neighbor);
-        visited.push(neighbor);
-        output.push(neighbor);
-        startVertex = neighbor;
-        break;
-      } else {
-        stack.pop();
-      }
-    }
-  }
-};
+  const graph = new Graph();
+  it('', () => {
+    let vertexA = new Vertex('A');
+    let vertexB = new Vertex('B');
+    let vertexC = new Vertex('C');
+    let vertexD = new Vertex('D');
+
+    graph.addNode(vertexA);
+    graph.addNode(vertexB);
+    graph.addNode(vertexC);
+    graph.addNode(vertexD);
+
+    graph.addBiDirectionalEdge(vertexA, vertexC);
+    graph.addBiDirectionalEdge(vertexC, vertexD);
+    graph.addBiDirectionalEdge(vertexA, vertexB);
+
+    let result = depthFirst(graph);
+    expect(result).toEqual(vertexA);
+
+  });
+
+});
