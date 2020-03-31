@@ -1,8 +1,8 @@
-# Table of Contents
+[![Build Status](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms)
 
-* [travis](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms)
+## Table of Contents
 
-## Code Challenges
+### Coding Challenges
 * [arrayReverse](/code-challenges/01-arrayReverse)
 * [arrayShift](/code-challenges/02-arrayShift)
 * [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
