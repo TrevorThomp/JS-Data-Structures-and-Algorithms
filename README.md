@@ -3,7 +3,11 @@
 # Data Structures and Algorithms
 Below is a listing of common data structures and algorithms. Each listing will show a whiteboard and testing in their respective directories.
 
-## Table of Contents
+## Setup
+Clone the repository and install with npm:
+```
+$ npm install
+```
 
 ### Coding Challenges
 * [arrayReverse](/code-challenges/01-arrayReverse)
