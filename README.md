@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/trevorthompson-401-advanced-javascript/data-structures-and-algorithms)
+[![Build Status](https://travis-ci.com/TrevorThomp/data-structures-and-algorithm.svg?branch=master)](https://travis-ci.com/TrevorThomp/data-structures-and-algorithm)
 
 # Data Structures and Algorithms
 Below is a listing of common data structures and algorithms. Each listing will show a whiteboard and testing in their respective directories.
