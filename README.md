@@ -18,8 +18,8 @@ $ npm install
 
 ## Sorting
 * [Insertion Sort](/code-challenges/insertionSort)
-* [mergeSort](/code-challenges/mergeSort)
-* [quickSort](/code-challenges/quickSort)
+* [Merge Sort](/code-challenges/mergeSort)
+* [Quick Sort](/code-challenges/quickSort)
 
 ## Misc
 * [Bracket Validation](/code-challenges/multiBracketValidation)
