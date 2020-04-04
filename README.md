@@ -10,23 +10,29 @@ $ npm install
 ```
 
 ### Coding Challenges
-* [arrayReverse](/code-challenges/01-arrayReverse)
-* [arrayShift](/code-challenges/02-arrayShift)
-* [arrayBinarySearch](/code-challenges/03-arrayBinarySearch)
-* [multipleBracketValidation](/code-challenges/multiBracketValidation)
-* [fizzBuzzTree](/code-challenges/fizzBuzzTree)
-* [insertionSort](/code-challenges/insertionSort)
-* [treeIntersection](/code-challenges/treeIntersection)
+
+## Arrays
+* [Array Reverse](/code-challenges/01-arrayReverse)
+* [Array Shift](/code-challenges/02-arrayShift)
+* [Array Binary Search](/code-challenges/03-arrayBinarySearch)
+
+## Sorting
+* [Insertion Sort](/code-challenges/insertionSort)
 * [mergeSort](/code-challenges/mergeSort)
 * [quickSort](/code-challenges/quickSort)
-* [repeatedWords](/code-challenges/repeatedWords)
-* [leftJoin](/code-challenges/leftJoin)
-* [graphBreadthFirst](/code-challenges/graphBreadthFirst)
-* [graphEdgeFirst](/code-challenges/graphGetEdge)
+
+## Misc
+* [Bracket Validation](/code-challenges/multiBracketValidation)
+* [Fizz Buzz Tree](/code-challenges/fizzBuzzTree)
+* [Tree Intersection](/code-challenges/treeIntersection)
+* [Repeating Words](/code-challenges/repeatedWords)
+* [Left Join](/code-challenges/leftJoin)
+* [Graph Breadth First (BFS)](/code-challenges/graphBreadthFirst)
+* [Graph Depth First (DFS)](/code-challenges/graphGetEdge)
 
 ## Data Structures
-* [linkedList](/data-structures/linkedList)
-* [stacksQueues](/data-structures/stacksAndQueues)
-* [queuesWithStacks](/data-structures/queueWithStacks)
-* [BinaryTree](/data-structures/tree)
-* [HashTable](/data-structures/hashTable)
+* [Linked List](/data-structures/linkedList)
+* [Stacks and Queues](/data-structures/stacksAndQueues)
+* [Queues with Stacks](/data-structures/queueWithStacks)
+* [Binary Tree](/data-structures/tree)
+* [Hash Table](/data-structures/hashTable)
